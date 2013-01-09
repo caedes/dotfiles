@@ -1,0 +1,36 @@
+# BUNDLE
+
+alias bi="bundle install"
+alias bu="bundle update"
+alias be="bundle exec"
+
+# GIT
+
+alias gaa="git add ."
+alias gds="git diff --staged"
+
+# POSTGRES
+
+alias pg_start="postmaster -D /usr/local/pgsql/data >logfile 2>&1 &"
+alias pg_stop="pg_ctl stop -D /usr/local/pgsql/data"
+
+# MySQL
+
+alias mysqlstart="/Library/StartupItems/MySQLCOM/MySQLCOM start"
+alias mysqlstop="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
+
+# SPORK
+
+alias td="nocorrect testdrb -Itest"
+
+# RAILS TEST
+
+alias t="ruby -Itest"
+
+# ZSH
+
+alias thin="nocorrect thin"
+alias thor="nocorrect thor"
+alias npm="nocorrect npm"
+alias grunt="nocorrect grunt"
+alias guard="nocorrect guard"
