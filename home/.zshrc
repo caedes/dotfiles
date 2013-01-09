@@ -37,7 +37,19 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/libexec:/Users/romain/bin:/Users/romain/.rvm/bin:/usr/local/pgsql/bin:/usr/local/sbin
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/bin:$PATH
+export PATH=/bin:$PATH
+export PATH=/usr/sbin:$PATH
+export PATH=/sbin:$PATH
+export PATH=/usr/X11/bin:$PATH
+export PATH=/usr/libexec:$PATH
+export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.rvm/bin:$PATH"
+export PATH=/usr/local/pgsql/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+export PATH=/usr/local/share/npm/bin:$PATH
+
 export CC=/usr/bin/gcc
 
 # Set the MySQL Home environment variable to point to the root directory of the MySQL installation.
