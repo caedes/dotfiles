@@ -42,3 +42,4 @@ alias neat="nocorrect neat"
 # SSH
 
 alias ssh_minecraft="ssh minecraft@88.191.147.82"
+alias pubkey="pbcopy < ~/.ssh/id_rsa.pub"
