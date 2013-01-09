@@ -78,4 +78,6 @@ if [ -d ~/Sites/ ]; then
   cd ~/Sites/
 fi
 
-git config --global core.excludesfile ~/.gitignore_global
+if [ -f ~/.gitignore_global ]; then
+  git config --global core.excludesfile ~/.gitignore_global
+fi
