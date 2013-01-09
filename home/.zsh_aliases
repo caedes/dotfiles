@@ -8,6 +8,10 @@ alias be="bundle exec"
 
 alias gds="git diff --staged"
 
+# BIN
+
+alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
+
 # POSTGRES
 
 alias pg_start="postmaster -D /usr/local/pgsql/data >logfile 2>&1 &"
