@@ -70,6 +70,8 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+# Change dir
+
 if [ -d ~/Documents/dev/ ]; then
   cd ~/Documents/dev/
 fi
@@ -77,6 +79,8 @@ fi
 if [ -d ~/Sites/ ]; then
   cd ~/Sites/
 fi
+
+# Add .gitignore_global
 
 if [ -f ~/.gitignore_global ]; then
   git config --global core.excludesfile ~/.gitignore_global
