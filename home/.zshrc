@@ -58,4 +58,10 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-cd ~/Documents/dev/
+if [ -d ~/Documents/dev/ ]; then
+  cd ~/Documents/dev/
+fi
+
+if [ -d ~/Sites/ ]; then
+  cd ~/Sites/
+fi
