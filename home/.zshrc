@@ -34,6 +34,9 @@ plugins=(git rails3 bundle)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/libexec:/Users/romain/bin:/Users/romain/.rvm/bin:/usr/local/pgsql/bin:/usr/local/sbin
 export CC=/usr/bin/gcc
 
