@@ -26,9 +26,10 @@ alias mysqlstop="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
 
 alias td="nocorrect testdrb -Itest"
 
-# RAILS TEST
+# RAILS
 
 alias t="ruby -Itest"
+alias sc="script/console"
 
 # ZSH
 
