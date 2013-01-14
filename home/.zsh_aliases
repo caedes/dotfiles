@@ -67,3 +67,9 @@ extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+# PATH
+
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
