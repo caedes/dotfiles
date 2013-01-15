@@ -39,6 +39,7 @@ alias npm="nocorrect npm"
 alias grunt="nocorrect grunt"
 alias guard="nocorrect guard"
 alias neat="nocorrect neat"
+alias rspec="nocorrect rspec"
 
 # SSH
 
