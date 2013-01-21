@@ -36,6 +36,11 @@ be # bundle exec
 # GIT
 
 gds  # git diff staged files
+gaa  # git add all files
+
+# BIN
+
+subl # launch SublimeText
 
 # POSTGRES
 
