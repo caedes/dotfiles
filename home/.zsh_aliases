@@ -15,7 +15,7 @@ timesheet () {
   else
     SINCE='8am'
   fi
-  git log --oneline --author="`git config --get user.name`" --since="$SINCE"
+  git log --oneline --author="`git config --get user.name`" --since=$SINCE
 }
 
 # BIN
