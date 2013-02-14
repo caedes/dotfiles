@@ -10,7 +10,7 @@ alias gds="git diff --staged"
 alias gaa="ga ."
 
 timesheet () {
-  git log --oneline --author="`git config --get user.name`" --since='8am'
+  git log --oneline --author="`git config --get user.name`" --since="$1"
 }
 
 # BIN
