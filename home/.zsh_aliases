@@ -13,8 +13,9 @@ timesheet () {
   if [ -z "$1" ]; then
     SINCE=$1
   else
-    SINCE='8am'
+    SINCE="8am"
   fi
+  echo $SINCE
   git log --oneline --author="`git config --get user.name`" --since=$SINCE
 }
 
