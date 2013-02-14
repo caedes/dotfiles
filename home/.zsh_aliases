@@ -8,7 +8,10 @@ alias be="bundle exec"
 
 alias gds="git diff --staged"
 alias gaa="ga ."
-alias timesheet="git log --oneline --author="`git config --get user.name`" --since='8am'"
+
+timesheet () {
+  git log --oneline --author="`git config --get user.name`" --since='8am'
+}
 
 # BIN
 
