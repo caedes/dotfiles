@@ -11,9 +11,9 @@ alias gaa="ga ."
 
 timesheet () {
   if [ -z "$1" ]; then
-    SINCE=$1
-  else
     SINCE="8am"
+  else
+    SINCE=$1
   fi
   echo $SINCE
   git log --oneline --author="`git config --get user.name`" --since=$SINCE
