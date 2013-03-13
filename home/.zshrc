@@ -49,6 +49,7 @@ export PATH="$HOME/.rvm/bin:$PATH"
 export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
+export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 export CC=/usr/bin/gcc
 
