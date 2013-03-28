@@ -21,3 +21,5 @@ def me
     me = nil
   end
 end
+
+alias :q :exit
