@@ -5,9 +5,12 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 IRB.conf[:AUTO_INDENT] = true
 
-require 'wirble'
-Wirble.init
-Wirble.colorize
+begin
+  require 'wirble'
+  Wirble.init
+  Wirble.colorize
+rescue
+end
 
 require 'logger'
 if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
