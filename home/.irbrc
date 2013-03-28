@@ -15,5 +15,9 @@ if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
 end
 
 def me
-  User.find_by_email 'romain.laurent@wopata.com'
+  if defined? User
+    User.find_by_email 'romain.laurent@wopata.com'
+  else
+    me = nil
+  end
 end
