@@ -23,3 +23,5 @@ def me
 end
 
 alias :q :exit
+
+puts `ruby -v`
