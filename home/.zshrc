@@ -45,7 +45,6 @@ export PATH=/sbin:$PATH
 export PATH=/usr/X11/bin:$PATH
 export PATH=/usr/libexec:$PATH
 export PATH="$HOME/bin:$PATH"
-export PATH="$HOME/.rvm/bin:$PATH"
 export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
