@@ -59,7 +59,7 @@ alias myssh="pbcopy < ~/.ssh/id_rsa.pub"
 
 # IP
 
-alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2"
+alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{ print $2}'"
 
 # ARCHIVE
 
