@@ -88,18 +88,18 @@ alias he="heroku"
 
 # CURL
 
-get() {
+function get() {
   curl -b /tmp/.curl_cookie -c /tmp/.curl_cookie "$@"
 }
 
-post() {
+function post() {
   get -d "$@"
 }
 
-put() {
+function put() {
   get -X PUT -d "$@"
 }
 
-delete() {
+function delete() {
   get -X DELETE "$@"
 }
