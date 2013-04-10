@@ -85,3 +85,21 @@ alias l.='ls -d .*'
 # HEROKU
 
 alias he="heroku"
+
+# CURL
+
+get() {
+  curl -b /tmp/.curl_cookie -c /tmp/.curl_cookie "$@"
+}
+
+post() {
+  get -d "$@"
+}
+
+put() {
+  get -X PUT -d "$@"
+}
+
+delete() {
+  get -X DELETE "$@"
+}
