@@ -7,10 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="miloshadzic"
 
-# Example aliases
-alias zshconfig="subl ~/.zshrc"
-alias ohmyzsh="subl ~/.oh-my-zsh"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -51,12 +47,6 @@ export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 
 export CC=/usr/bin/gcc
-
-# Set the MySQL Home environment variable to point to the root directory of the MySQL installation.
-export set MYSQL_HOME=/usr/local/mysql-5.5.28-osx10.6-x86_64
-
-# Add the /bin directory from the MYSQL_HOME location into your $PATH environment variable.
-export set PATH=$PATH:$MYSQL_HOME/bin
 
 export PGHOST=/tmp
 

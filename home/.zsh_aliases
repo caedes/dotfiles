@@ -22,16 +22,6 @@ timesheet () {
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
-# POSTGRES
-
-alias pg_start="postmaster -D /usr/local/pgsql/data >logfile 2>&1 &"
-alias pg_stop="pg_ctl stop -D /usr/local/pgsql/data"
-
-# MySQL
-
-alias mysqlstart="/Library/StartupItems/MySQLCOM/MySQLCOM start"
-alias mysqlstop="/Library/StartupItems/MySQLCOM/MySQLCOM stop"
-
 # SPORK
 
 alias td="nocorrect testdrb -Itest"
