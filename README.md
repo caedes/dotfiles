@@ -37,20 +37,11 @@ be # bundle exec
 
 gds  # git diff staged files
 gaa  # git add all files
+timesheet # list my own commits
 
 # BIN
 
 subl # launch SublimeText
-
-# POSTGRES
-
-pg_start # start pgsql server
-pg_stop # stop pgsql server
-
-# MySQL
-
-mysqlstart # start mysql server
-mysqlstop # stop mysql server
 
 # SPORK
 
@@ -63,7 +54,11 @@ sc # run console for Rails 2
 
 # SSH
 
-pubkey # add public key in clipboard
+myssh # add public key in clipboard
+
+# IP
+
+myip # display my local IP
 
 # ARCHIVE
 
@@ -72,6 +67,10 @@ extract # extract most know archives with one command
 # PATH
 
 mcd # make and cd into directory
-
 l. # show hidden files only
+
+# HEROKU
+
+he # heroku
+
 ```
