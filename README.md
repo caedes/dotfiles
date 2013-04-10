@@ -24,53 +24,64 @@ homesick symlink dotfiles
 
 ## Documentation
 
-### Alias
+### Bundle
 
-```shell
-# BUNDLE
+`bi` bundle install
 
-bi #bundle install
-bu # bundle update
-be # bundle exec
+`bu` bundle update
 
-# GIT
+`be` bundle exec
 
-gds  # git diff staged files
-gaa  # git add all files
-timesheet # list my own commits
+### Git
 
-# BIN
+`gds` git diff staged files
 
-subl # launch SublimeText
+`gaa` git add all files
 
-# SPORK
+`timesheet` list my own commits
 
-td # run rspec test file
+### bin
 
-# RAILS
+`subl` launch SublimeText
 
-t # run test::unit file
-sc # run console for Rails 2
+### Spork
 
-# SSH
+`td` run rspec test file
 
-myssh # add public key in clipboard
+### Rails
 
-# IP
+`t` run test::unit file
 
-myip # display my local IP
+`sc` run console for Rails 2
 
-# ARCHIVE
+### SSH
 
-extract # extract most know archives with one command
+`myssh` add public key in clipboard
 
-# PATH
+### IP
 
-mcd # make and cd into directory
-l. # show hidden files only
+`myip` display my local IP
 
-# HEROKU
+### archive
 
-he # heroku
+`extract` extract most know archives with one command
 
-```
+### path
+
+`mcd` make and cd into directory
+
+`l.` show hidden files only
+
+### Heroku
+
+`he` heroku
+
+### cURL
+
+`get` send a cURL GET request
+
+`post` send a cURL POST request
+
+`put` send a cURL PUT request
+
+`delete` send a cURL DELETE request
