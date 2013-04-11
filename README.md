@@ -42,6 +42,8 @@ homesick symlink dotfiles
 
 `timesheet` list my own commits
 
+`todo` write a todo empty commit
+
 ### bin
 
 `subl` launch SublimeText

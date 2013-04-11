@@ -20,6 +20,10 @@ timesheet () {
 
 alias gll="git log --pretty=format:'%C(yellow)%h %ad %Creset%s%Cblue [%cn]' --decorate --date=short"
 
+todo() {
+  git commit --allow-empty -m "TODO: $*"
+}
+
 # BIN
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
