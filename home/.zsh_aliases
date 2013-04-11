@@ -18,6 +18,8 @@ timesheet () {
   git log --oneline --author="`git config --get user.name`" --since=$SINCE
 }
 
+alias gll="git log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate"
+
 # BIN
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"

@@ -38,6 +38,8 @@ homesick symlink dotfiles
 
 `gaa` git add all files
 
+`gll` pretty list commits
+
 `timesheet` list my own commits
 
 ### bin
