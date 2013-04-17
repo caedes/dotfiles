@@ -31,10 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH=/usr/local/bin:$PATH
@@ -49,10 +45,18 @@ export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
+export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.rbenv/bin:$PATH"
 
 export CC=/usr/bin/gcc
 
 export PGHOST=/tmp
+
+# RBENV
+
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 # LOAD nvm COMMAND
 . ~/nvm/nvm.sh
