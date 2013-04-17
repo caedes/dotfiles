@@ -35,9 +35,7 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
-if which rvm > /dev/null; then
-  [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
