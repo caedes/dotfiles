@@ -31,8 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/bin:$PATH
