@@ -18,7 +18,7 @@ timesheet () {
   git log --oneline --author="`git config --get user.name`" --since=$SINCE
 }
 
-alias gll="git log --pretty=format:'%C(yellow)%h %ad %Creset%s%Cblue [%cn]' --decorate --date=short"
+alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cgreen [%cn]' --decorate --date=short"
 
 # BIN
 
