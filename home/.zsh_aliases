@@ -43,6 +43,7 @@ alias guard="nocorrect guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
 alias guard="guard --no-bundler-warning"
+alias reload!='. ~/.zshrc'
 
 # SSH
 
