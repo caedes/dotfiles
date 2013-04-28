@@ -41,6 +41,8 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
 fi
 
+rbenv rehash 2>/dev/null
+
 # LOAD nvm COMMAND
 . ~/nvm/nvm.sh
 
