@@ -108,3 +108,13 @@ function put() {
 function delete() {
   get -X DELETE "$@"
 }
+
+# UPDATE
+
+function update () {
+  # Set OS X defaults
+  ~/.homesick/repos/dotfiles/osx/set-defaults.sh
+
+  # Upgrade homebrew
+  brew update
+}
