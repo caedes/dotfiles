@@ -38,6 +38,7 @@ alias td="nocorrect testdrb -Itest"
 alias t="ruby -Itest"
 alias sc="script/console"
 alias sg='script/generate'
+alias migrate='rake db:migrate db:test:prepare'
 
 # ZSH
 
