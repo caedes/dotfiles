@@ -85,7 +85,7 @@ function mcd() {
 
 alias l.='ls -ld .*'
 
-alias dotfiles='cd ~/.homesick/repos/dotfiles'
+alias dotfiles="cd $DOTFILES"
 
 # HEROKU
 
@@ -113,7 +113,7 @@ function delete() {
 
 function update () {
   # Set OS X defaults
-  ~/.homesick/repos/dotfiles/osx/set-defaults.sh
+  $DOTFILES/osx/set-defaults.sh
 
   # Upgrade homebrew
   brew update
