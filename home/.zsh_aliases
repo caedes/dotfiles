@@ -9,8 +9,9 @@ alias be="bundle exec"
 alias gds="git diff --staged"
 alias gaa="ga ."
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cgreen [%cn]' --decorate --date=short"
 
-timesheet () {
+function timesheet () {
   if [ -z "$1" ]; then
     SINCE="8am"
   else
@@ -18,8 +19,6 @@ timesheet () {
   fi
   git log --oneline --author="`git config --get user.name`" --since=$SINCE
 }
-
-alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cgreen [%cn]' --decorate --date=short"
 
 function gundo () {
   git reset --soft HEAD~1
@@ -62,7 +61,7 @@ alias myip="ifconfig | grep 'inet ' | grep -v 127.0.0.1 | awk '{ print $2}'"
 
 # ARCHIVE
 
-extract () {
+function extract () {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1     ;;
@@ -85,13 +84,12 @@ extract () {
 
 # PATH
 
+alias l.='ls -ld .*'
+alias dotfiles="cd $DOTFILES"
+
 function mcd() {
   mkdir -p "$1" && cd "$1";
 }
-
-alias l.='ls -ld .*'
-
-alias dotfiles="cd $DOTFILES"
 
 # HEROKU
 
