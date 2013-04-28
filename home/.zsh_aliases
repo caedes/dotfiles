@@ -84,6 +84,8 @@ function mcd() {
 
 alias l.='ls -ld .*'
 
+alias dotfiles='cd ~/.homesick/repos/dotfiles'
+
 # HEROKU
 
 alias he="heroku"
