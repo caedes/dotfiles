@@ -37,6 +37,7 @@ alias td="nocorrect testdrb -Itest"
 
 alias t="ruby -Itest"
 alias sc="script/console"
+alias sg='script/generate'
 
 # ZSH
 
