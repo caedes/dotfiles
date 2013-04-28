@@ -20,7 +20,7 @@ timesheet () {
 
 alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cgreen [%cn]' --decorate --date=short"
 
-# BIN
+# EDITOR
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
 
