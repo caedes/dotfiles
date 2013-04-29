@@ -25,6 +25,12 @@ function gundo () {
   git reset HEAD `git status -s | tr -d 'M' | tr -d '\n'`
 }
 
+function gclean () {
+  git remote prune origin
+  git fetch
+  git branch -a --merged | grep -v -E 'master|stable|staging' | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
+}
+
 # EDITOR
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
