@@ -39,21 +39,22 @@ export PGHOST=/tmp
 
 if which rbenv > /dev/null; then
   eval "$(rbenv init -)"
+  rbenv rehash 2>/dev/null
 fi
 
-rbenv rehash 2>/dev/null
-
 # LOAD nvm COMMAND
-. ~/nvm/nvm.sh
 
-export set PATH=$PATH:/usr/local/share/npm/bin
+if [ -f ~/nvm/nvm.sh ]; then
+  . ~/nvm/nvm.sh
+fi
 
 # LOAD ALL ALIASES
+
 if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
-# Change dir
+# DEFAULT DIRECTORY
 
 if [ -d ~/Documents/dev/ ]; then
   cd ~/Documents/dev/
