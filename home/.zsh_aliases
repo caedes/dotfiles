@@ -46,6 +46,17 @@ alias sc="script/console"
 alias sg='script/generate'
 alias migrate='rake db:migrate db:test:prepare'
 
+# POSTGRESQL
+
+function resetdb () {
+  if [ -z "$1" ]; then
+    echo 'resetdb: missing required argument database name'
+  else
+    dropdb $1 && createdb $1
+  fi
+}
+alias dumpdb='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d'
+
 # ZSH
 
 alias thin="nocorrect thin"
