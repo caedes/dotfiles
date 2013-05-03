@@ -54,6 +54,12 @@ if [ -f ~/.zsh_aliases ]; then
     . ~/.zsh_aliases
 fi
 
+# Use .localrc for SUPER SECRET CRAP
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
 # DEFAULT DIRECTORY
 
 if [ -d ~/Documents/dev/ ]; then
