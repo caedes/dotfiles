@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="miloshadzic"
 
-DOTFILES='~/.homesick/repos/dotfiles'
+DOTFILES=~/.homesick/repos/dotfiles
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -55,20 +55,21 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 # Use .localrc for SUPER SECRET CRAP
-if [[ -a ~/.localrc ]]
-then
+if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi
 
 # DEFAULT DIRECTORY
 
 if [ -d ~/Documents/dev/ ]; then
-  cd ~/Documents/dev/
+  PROJECTS=~/Documents/dev/
 fi
 
 if [ -d ~/Sites/ ]; then
-  cd ~/Sites/
+  PROJECTS=~/Sites/
 fi
+
+cd $PROJECTS
 
 # Add .gitignore_global
 
