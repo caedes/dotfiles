@@ -61,15 +61,10 @@ fi
 
 # DEFAULT DIRECTORY
 
-if [ -d ~/Documents/dev/ ]; then
-  PROJECTS=~/Documents/dev/
+if [ -d ~/Projects/ ]; then
+  PROJECTS=~/Projects/
+  cd $PROJECTS
 fi
-
-if [ -d ~/Sites/ ]; then
-  PROJECTS=~/Sites/
-fi
-
-cd $PROJECTS
 
 # Add .gitignore_global
 
