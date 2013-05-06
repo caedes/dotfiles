@@ -42,10 +42,7 @@ alias td="nocorrect testdrb -Itest"
 # RAILS
 
 alias t="ruby -Itest"
-alias sc="script/console"
-alias sg='script/generate'
 alias init='gem install bundler && bundle'
-alias migrate='rake db:migrate db:test:prepare'
 
 # POSTGRESQL
 
