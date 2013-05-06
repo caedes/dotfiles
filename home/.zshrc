@@ -14,7 +14,7 @@ PROJECTS=~/Projects/
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rails rails3 bundler brew)
+plugins=(git rails rails3 bundler brew cloudapp)
 
 source $ZSH/oh-my-zsh.sh
 
