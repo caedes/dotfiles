@@ -1,9 +1,3 @@
-# BUNDLE
-
-alias bi="bundle install"
-alias bu="bundle update"
-alias be="bundle exec"
-
 # GIT
 
 alias gds="git diff --staged"
