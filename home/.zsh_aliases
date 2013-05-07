@@ -144,20 +144,20 @@ function delete() {
 
 function update () {
   # Set OS X defaults
-  echo "Default OSX config..."
-  $DOTFILES/osx/set-defaults.sh
-  echo "updated.\n"
+  echo "Default OSX config..." &&
+  $DOTFILES/osx/set-defaults.sh &&
+  echo "updated.\n" &&
 
   # Upgrade homebrew
-  echo "Homebrew..."
-  brew update
+  echo "Homebrew..." &&
+  brew update &&
 
   # Upgrade dotfiles
-  echo "\nDotfiles..."
-  dotfiles && ggpull
+  echo "\nDotfiles..." &&
+  dotfiles && ggpull &&
 
   # Reload
-  echo "\nReload..."
+  echo "\nReload..." &&
   reload!
 }
 
