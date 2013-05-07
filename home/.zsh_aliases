@@ -106,6 +106,22 @@ function mcd() {
 
 alias he="heroku"
 
+function deploy () {
+  if [ -z "$1" ]; then
+    echo 'deploy: missing required argument deployment environment'
+  elif [ $1 = 'production' ] || [ $1 = 'staging' ]; then
+    [[ $1 = 'production' ]] && branch='stable' || branch='staging'
+    he maintenance:on &&
+    gp heroku-$1 $branch:master &&
+    he run rake db:migrate &&
+    he restart &&
+    he maintenance:off &&
+    he open
+  else
+    echo 'deploy: incorrect deployment environment'
+  fi
+}
+
 # CURL
 
 function get() {
