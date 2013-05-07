@@ -25,6 +25,22 @@ function gclean () {
   git branch -a --merged | grep -v -E 'master|stable|staging' | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
 }
 
+function gbf () {
+  if [ -z "$1" ]; then
+    echo 'deploy: missing required argument branch name'
+  else
+    git checkout -b feature-$1
+  fi
+}
+
+function gbh () {
+  if [ -z "$1" ]; then
+    echo 'deploy: missing required argument branch name'
+  else
+    git checkout -b hotfix-$1
+  fi
+}
+
 # EDITOR
 
 alias subl="/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl"
