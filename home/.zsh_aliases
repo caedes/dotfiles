@@ -63,7 +63,18 @@ function resetdb () {
     dropdb $1 && createdb $1
   fi
 }
-alias restoredb='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d'
+
+function restoredb () {
+  if [ -z "$1" ]; then
+    echo 'restoredb: missing required argument database name'
+  else
+    if [ -z "$2" ]; then
+      echo 'restoredb: missing required argument dump file'
+    else
+      pg_restore --verbose --clean --no-acl --no-owner -h localhost -d $1 $2
+    fi
+  fi
+}
 
 # ZSH
 
