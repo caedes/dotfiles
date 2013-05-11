@@ -63,7 +63,7 @@ function resetdb () {
     dropdb $1 && createdb $1
   fi
 }
-alias dumpdb='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d'
+alias restoredb='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d'
 
 # ZSH
 
