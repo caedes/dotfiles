@@ -53,6 +53,8 @@ alias td="nocorrect testdrb -Itest"
 
 alias t="ruby -Itest"
 alias init='gem install bundler && bundle'
+alias fs="foreman start"
+alias fsd="foreman start -f Procfile.development"
 
 # POSTGRESQL
 
