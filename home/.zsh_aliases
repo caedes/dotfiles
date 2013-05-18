@@ -171,6 +171,10 @@ function delete() {
 # UPDATE
 
 function update () {
+  # Upgrade dotfiles
+  echo "\nDotfiles..." &&
+  dotfiles && ggpull &&
+
   # Set OS X defaults
   echo "Default OSX config..." &&
   $DOTFILES/osx/set-defaults.sh &&
@@ -179,10 +183,6 @@ function update () {
   # Upgrade homebrew
   echo "Homebrew..." &&
   brew update &&
-
-  # Upgrade dotfiles
-  echo "\nDotfiles..." &&
-  dotfiles && ggpull &&
 
   # Reload
   echo "\nReload..." &&
