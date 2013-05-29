@@ -185,6 +185,10 @@ function update () {
   echo "Homebrew..." &&
   brew update &&
 
+  # Upgrade heroku toolbelt
+  echo "Heroku..." &&
+  heroku update &&
+
   # Reload
   echo "\nReload..." &&
   reload!
