@@ -186,7 +186,7 @@ function update () {
   brew update &&
 
   # Upgrade heroku toolbelt
-  echo "Heroku..." &&
+  echo "\nHeroku..." &&
   heroku update &&
 
   # Reload
