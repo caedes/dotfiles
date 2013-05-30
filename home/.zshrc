@@ -61,6 +61,12 @@ if [[ -a ~/.localrc ]]; then
   source ~/.localrc
 fi
 
+# Auto updating dotfiles
+
+if [ -f ~/.dotfiles_update ]; then
+    . ~/.dotfiles_update
+fi
+
 # DEFAULT DIRECTORY
 
 cd $PROJECTS

@@ -189,9 +189,10 @@ function update () {
   echo "\nHeroku..." &&
   heroku update &&
 
-  # Reload
-  echo "\nReload..." &&
-  reload!
+  if [ -z "$1" ]; then
+    echo "\nReload..." &&
+    reload!
+  fi
 }
 
 # XCODE

@@ -1,0 +1,24 @@
+function _current_epoch_days() {
+  echo $(($(date +%s) / 60 / 60 / 24))
+}
+
+function _update_dotfiles_last_update() {
+  echo "DOTFILES_LAST_UPDATE_EPOCH_DAYS=$(_current_epoch_days)" > ~/.dotfiles_last_update
+}
+
+if [ -f ~/.dotfiles_last_update ]; then
+  . ~/.dotfiles_last_update
+
+  if [[ -z "$DOTFILES_LAST_UPDATE_EPOCH_DAYS" ]]; then
+    _update_dotfiles_last_update && return 0;
+  fi
+
+  diff_days=$(($(_current_epoch_days) - $DOTFILES_LAST_UPDATE_EPOCH_DAYS))
+
+  if [ $diff_days -gt 7 ]; then
+    update 'no_reload'
+    _update_dotfiles_last_update
+  fi
+else
+  _update_dotfiles_last_update
+fi
