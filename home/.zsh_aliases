@@ -20,7 +20,8 @@ function gundo () {
 }
 
 function gclean () {
-  git checkout master &&
+  gcm &&
+  ggpull &&
   git remote prune origin &&
   git fetch &&
   git branch -a --merged | grep -v -E 'master|stable|staging' | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
