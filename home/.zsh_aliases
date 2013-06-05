@@ -29,7 +29,7 @@ function gclean () {
 
 function gbf () {
   if [ -z "$1" ]; then
-    echo 'deploy: missing required argument branch name'
+    echo 'creating feature branch: missing required argument branch name'
   else
     git checkout -b feature_$1
   fi
@@ -37,7 +37,7 @@ function gbf () {
 
 function gbh () {
   if [ -z "$1" ]; then
-    echo 'deploy: missing required argument branch name'
+    echo 'creating hotfix branch: missing required argument branch name'
   else
     git checkout -b hotfix_$1
   fi
