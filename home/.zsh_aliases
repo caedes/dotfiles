@@ -142,6 +142,8 @@ function deploy () {
     echo 'deploy: missing required argument deployment environment'
   elif [ $1 = 'production' ] || [ $1 = 'staging' ]; then
     [[ $1 = 'production' ]] && branch='stable' || branch='staging'
+    gco $branch &&
+    ggpull &&
     he maintenance:on &&
     gp heroku-$1 $branch:master &&
     he run rake db:migrate &&
