@@ -37,12 +37,6 @@ export CC=/usr/bin/gcc
 
 export PGHOST=/tmp
 
-# RBENV
-
-if which rbenv > /dev/null; then
-  rbenv rehash 2>/dev/null
-fi
-
 # LOAD nvm COMMAND
 
 if [ -f ~/nvm/nvm.sh ]; then
