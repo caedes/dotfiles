@@ -58,6 +58,7 @@ alias init='gem install bundler && bundle'
 alias fs="foreman start"
 alias fsd="foreman start -f Procfile.development"
 alias sss="RAILS_ENV=test rake sunspot:solr:start"
+alias fccr="foreman run rails console"
 
 # POSTGRESQL
 
