@@ -1,3 +1,5 @@
+COMPLETION_WAITING_DOTS='true'
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
