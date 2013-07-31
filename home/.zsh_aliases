@@ -110,7 +110,6 @@ alias pk='nocorrect pk'
 
 # SSH
 
-alias ssh_minecraft="ssh minecraft@88.191.147.82"
 alias myssh="pbcopy < ~/.ssh/id_rsa.pub"
 
 # IP
