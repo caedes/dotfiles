@@ -65,9 +65,3 @@ fi
 # DEFAULT DIRECTORY
 
 cd $PROJECTS
-
-# Add .gitignore_global
-
-if [ -f ~/.gitignore_global ]; then
-  git config --global core.excludesfile ~/.gitignore_global
-fi
