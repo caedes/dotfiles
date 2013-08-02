@@ -105,7 +105,7 @@ alias grunt="nocorrect grunt"
 alias guard="nocorrect bundle exec guard"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
-alias reload!='exec zsh'
+alias reload="echo \`pwd\` > ~/.RELOAD && exec zsh"
 alias pk='nocorrect pk'
 
 # SSH
