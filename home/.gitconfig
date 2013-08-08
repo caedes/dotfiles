@@ -1,4 +1,8 @@
 [color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
   ui = true
 [core]
   excludesfile = ~/.gitignore_global
