@@ -92,7 +92,7 @@ function dumpdb () {
     if [ -z "$2" ]; then
       echo 'dumpdb: missing required argument dump file'
     else
-      pg_dump -Fc $1 > $2
+      pg_dump -Fc $1 > $2_`date +%Y%m%d%H%M%S`.dump
     fi
   fi
 }
