@@ -87,10 +87,10 @@ function restoredb () {
 
 function dumpdb () {
   if [ -z "$1" ]; then
-    echo 'restoredb: missing required argument database name'
+    echo 'dumpdb: missing required argument database name'
   else
     if [ -z "$2" ]; then
-      echo 'restoredb: missing required argument dump file'
+      echo 'dumpdb: missing required argument dump file'
     else
       pg_dump -Fc $1 > $2
     fi
