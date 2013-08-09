@@ -166,7 +166,6 @@ function deploy () {
     he maintenance:on &&
     gp heroku-$1 $branch:master &&
     he run rake db:migrate &&
-    he restart &&
     he maintenance:off &&
     he open
   else
