@@ -6,6 +6,8 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cred [%cn]' --decorate --date=short"
 alias gm="git merge"
 alias gap="git add --patch"
+alias gss="git stash save"
+alias gsl="git stash list"
 
 function timesheet () {
   if [ -z "$1" ]; then
