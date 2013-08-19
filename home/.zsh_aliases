@@ -5,7 +5,7 @@ alias gaa="ga . -N"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cred [%cn]' --decorate --date=short"
 alias gm="git merge"
-alias gap="git add . -N && git add --patch"
+alias gap="git add --patch"
 
 function timesheet () {
   if [ -z "$1" ]; then
