@@ -9,6 +9,15 @@ alias gap="git add --patch"
 alias gss="git stash save"
 alias gsl="git stash list"
 
+function gsa () {
+  if [ -z "$1" ]; then
+    STASH=0
+  else
+    STASH=$1
+  fi
+  git stash apply stash@{$STASH}
+}
+
 function timesheet () {
   if [ -z "$1" ]; then
     SINCE="8am"
