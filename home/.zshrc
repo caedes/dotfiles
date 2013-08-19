@@ -45,6 +45,12 @@ if [ -f ~/nvm/nvm.sh ]; then
   . ~/nvm/nvm.sh
 fi
 
+# LOAD SHELL DEPENDENCIES
+
+if [ -f ~/.zsh_colors ]; then
+    . ~/.zsh_colors
+fi
+
 # LOAD ALL ALIASES
 
 if [ -f ~/.zsh_aliases ]; then
