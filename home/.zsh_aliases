@@ -31,7 +31,7 @@ function gclean () {
 
 function gbf () {
   if [ -z "$1" ]; then
-    echo 'creating feature branch: missing required argument branch name'
+    red 'creating feature branch: missing required argument branch name'
   else
     git checkout -b feature_$1
   fi
@@ -39,7 +39,7 @@ function gbf () {
 
 function gbh () {
   if [ -z "$1" ]; then
-    echo 'creating hotfix branch: missing required argument branch name'
+    red 'creating hotfix branch: missing required argument branch name'
   else
     git checkout -b hotfix_$1
   fi
@@ -67,7 +67,7 @@ alias frg="foreman run guard"
 
 function resetdb () {
   if [ -z "$1" ]; then
-    echo 'resetdb: missing required argument database name'
+    red 'resetdb: missing required argument database name'
   else
     dropdb $1 && createdb $1
   fi
@@ -75,10 +75,10 @@ function resetdb () {
 
 function restoredb () {
   if [ -z "$1" ]; then
-    echo 'restoredb: missing required argument database name'
+    red 'restoredb: missing required argument database name'
   else
     if [ -z "$2" ]; then
-      echo 'restoredb: missing required argument dump file'
+      red 'restoredb: missing required argument dump file'
     else
       pg_restore --verbose --clean --no-acl --no-owner -h localhost -d $1 $2
     fi
@@ -87,10 +87,10 @@ function restoredb () {
 
 function dumpdb () {
   if [ -z "$1" ]; then
-    echo 'dumpdb: missing required argument database name'
+    red 'dumpdb: missing required argument database name'
   else
     if [ -z "$2" ]; then
-      echo 'dumpdb: missing required argument dump file'
+      red 'dumpdb: missing required argument dump file'
     else
       pg_dump -Fc $1 > $2_`date +%Y%m%d%H%M%S`.dump
     fi
@@ -136,10 +136,10 @@ function extract () {
       *.zip)       unzip $1       ;;
       *.Z)         uncompress $1  ;;
       *.7z)        7z x $1        ;;
-      *)     echo "'$1' cannot be extracted via extract()" ;;
+      *)     yellow "'$1' cannot be extracted via extract()" ;;
     esac
   else
-    echo "'$1' is not a valid file"
+    red "'$1' is not a valid file"
   fi
 }
 
@@ -158,7 +158,7 @@ alias he="heroku"
 
 function deploy () {
   if [ -z "$1" ]; then
-    echo 'deploy: missing required argument deployment environment'
+    red 'deploy: missing required argument deployment environment'
   elif [ $1 = 'production' ] || [ $1 = 'staging' ]; then
     [[ $1 = 'production' ]] && branch='stable' || branch='staging'
     gco $branch &&
@@ -169,7 +169,7 @@ function deploy () {
     he maintenance:off &&
     he open
   else
-    echo 'deploy: incorrect deployment environment'
+    red 'deploy: incorrect deployment environment'
   fi
 }
 
@@ -195,24 +195,27 @@ function delete() {
 
 function update () {
   # Upgrade dotfiles
-  echo "\nDotfiles..." &&
+  cyan "\nDotfiles..." &&
   dotfiles && ggpull &&
+  green "Dotfiles updated.\n" &&
 
   # Set OS X defaults
-  echo "Default OSX config..." &&
+  cyan "Default OSX config..." &&
   $DOTFILES/osx/set-defaults.sh &&
-  echo "updated.\n" &&
+  green "Default OSX config updated.\n" &&
 
   # Upgrade homebrew
-  echo "Homebrew..." &&
+  cyan "Homebrew..." &&
   brew update &&
+  green "Homebrew updated.\n" &&
 
   # Upgrade heroku toolbelt
-  echo "\nHeroku..." &&
+  cyan "\nHeroku..." &&
   heroku update &&
+  green "Heroku updated.\n" &&
 
   if [ -z "$1" ]; then
-    echo "\nReload..." &&
+    cyan "\nReload..." &&
     reload
   fi
 }
