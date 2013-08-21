@@ -108,6 +108,17 @@ function dumpdb () {
   fi
 }
 
+function hedumpdb () {
+  if [ -z "$1" ]; then
+    red 'hedumpdb: missing required argument app name'
+  else
+    heroku pgbackups:capture --expire --app $1
+    now=`date +%Y%m%d%H%M%S`
+    backup_url=`heroku pgbackups:url --app $1`
+    echo "curl -o $1_$now.dump $backup_url" | pbcopy
+  fi
+}
+
 # ZSH
 
 alias thin="nocorrect thin"
