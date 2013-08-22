@@ -180,18 +180,17 @@ alias he="heroku"
 
 function deploy () {
   if [ -z "$1" ]; then
-    red 'deploy: missing required argument deployment environment'
-  elif [ $1 = 'production' ] || [ $1 = 'staging' ]; then
-    [[ $1 = 'production' ]] && branch='stable' || branch='staging'
-    gco $branch &&
-    ggpull &&
-    he maintenance:on &&
-    gp heroku-$1 $branch:master &&
-    he run rake db:migrate &&
-    he maintenance:off &&
-    he open
+    red 'deploy: missing required branch'
+  elif [ -z "$2" ]; then
+    red 'deploy: missing required app'
   else
-    red 'deploy: incorrect deployment environment'
+    gco $1 &&
+    ggpnp &&
+    heroku maintenance:on --app $2 &&
+    gp $2 $1:master &&
+    heroku run rake db:migrate --app $2 &&
+    heroku maintenance:off --app $2 &&
+    heroku open --app $2
   fi
 }
 
