@@ -218,6 +218,7 @@ function update () {
   # Upgrade dotfiles
   cyan "\nDotfiles..." &&
   dotfiles && ggpull &&
+  homesick symlink dotfiles &&
   green "Dotfiles updated.\n" &&
 
   # Set OS X defaults
@@ -237,6 +238,7 @@ function update () {
 
   if [ -z "$1" ]; then
     cyan "\nReload..." &&
+    clear &&
     reload
   fi
 }
