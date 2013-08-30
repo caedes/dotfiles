@@ -67,12 +67,13 @@ alias td="nocorrect testdrb -Itest"
 # RAILS
 
 alias t="ruby -Itest"
-alias init='gem install bundler && bundle'
+alias init='gem install bundler --pre && bundle -j4'
 alias fs="foreman start"
 alias fsd="foreman start -f Procfile.development"
 alias sss="RAILS_ENV=test rake sunspot:solr:start"
 alias frc="foreman run rails console"
 alias frg="foreman run guard"
+alias bi="bundle install -j4"
 
 # POSTGRESQL
 
