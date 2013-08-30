@@ -116,6 +116,7 @@ function hedumpdb () {
     now=`date +%Y%m%d%H%M%S`
     backup_url=`heroku pgbackups:url --app $1`
     echo "curl -o $1_$now.dump $backup_url" | pbcopy
+    green 'curl dump copy in clipboard'
   fi
 }
 
