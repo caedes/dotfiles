@@ -228,11 +228,6 @@ function update () {
   $DOTFILES/osx/set-defaults.sh &&
   green "Default OSX config updated.\n" &&
 
-  # Upgrade homebrew
-  cyan "Homebrew..." &&
-  brew update &&
-  green "Homebrew updated.\n" &&
-
   # Upgrade heroku toolbelt
   cyan "\nHeroku..." &&
   heroku update &&
