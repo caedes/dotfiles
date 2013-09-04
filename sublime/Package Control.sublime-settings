@@ -1,0 +1,17 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Auto Encoding for Ruby",
+		"CoffeeScript",
+		"Gist",
+		"GitGutter",
+		"Haml",
+		"Package Control",
+		"Rails Partial",
+		"RenameTab",
+		"Ruby Hash Reverter",
+		"Sass",
+		"Theme - Soda"
+	]
+}
