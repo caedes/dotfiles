@@ -20,9 +20,9 @@ plugins=(git rails rails3 bundler brew cloudapp)
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
-export PATH=/bin:$PATH
 export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
 export PATH=/usr/X11/bin:$PATH
