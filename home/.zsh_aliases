@@ -75,7 +75,7 @@ alias frg="foreman run guard"
 alias bi="bundle install -j4"
 
 function init () {
-  echo '.gems' > .rbenv-gemsets
+  echo `basename $PWD` > .rbenv-gemsets
   gem install bundler --pre
   bundle -j4
 }
