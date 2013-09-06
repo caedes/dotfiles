@@ -176,6 +176,7 @@ function extract () {
 
 alias l.='ls -ld .*'
 alias dotfiles="cd $DOTFILES"
+alias ll='ls -hl'
 
 function mcd() {
   mkdir -p "$1" && cd "$1";
