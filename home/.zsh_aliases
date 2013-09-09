@@ -32,6 +32,11 @@ function gundo () {
   git reset HEAD `git status -s | tr -d 'M' | tr -d '\n'`
 }
 
+# Fix oh-my-zsh's git plugin conflict
+if type gclean > /dev/null; then
+  unalias gclean
+fi
+
 function gclean () {
   gcm &&
   ggpull &&
