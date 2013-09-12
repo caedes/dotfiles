@@ -61,6 +61,22 @@ function gbh () {
   fi
 }
 
+function gtag () {
+  if [ -z "$1" ]; then
+    red 'bumping version: missing required argument version number'
+  else
+    git checkout master
+    git commit -am 'Bump version v'$1
+    git push origin master
+    git checkout stable
+    git merge master
+    git tag v$1
+    git push origin stable
+    git push --tags
+    git checkout master
+  fi
+}
+
 # EDITOR
 
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
