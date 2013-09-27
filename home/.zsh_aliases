@@ -202,6 +202,7 @@ function extract () {
 alias l.='ls -ld .*'
 alias dotfiles="cd $DOTFILES"
 alias ll='ls -hl'
+alias duh="du -h . | grep '\./[^/]*$'"
 
 function mcd() {
   mkdir -p "$1" && cd "$1";
