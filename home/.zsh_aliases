@@ -96,9 +96,13 @@ alias frg="foreman run guard"
 alias bi="bundle install -j4"
 
 function init () {
+  if [ $# -eq 1 ]; then
+    echo $1 > .ruby-version
+  fi
+
   echo `basename $PWD` > .rbenv-gemsets
-  gem install bundler --pre
-  bundle -j4
+  reload
+  gem install bundler --pre && bundle -j4
 }
 
 # POSTGRESQL
