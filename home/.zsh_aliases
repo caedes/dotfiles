@@ -61,6 +61,14 @@ function gbh () {
   fi
 }
 
+function gbrc () {
+  if [ -z "$1" ]; then
+    red 'creating release candidate branch: missing required argument branch name'
+  else
+    git checkout -b rc_$1
+  fi
+}
+
 function gtag () {
   if [ -z "$1" ]; then
     red 'bumping version: missing required argument version number'
