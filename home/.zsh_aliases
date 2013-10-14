@@ -49,7 +49,7 @@ function gbf () {
   if [ -z "$1" ]; then
     red 'creating feature branch: missing required argument branch name'
   else
-    git checkout -b feature_$1
+    git checkout -b feature-$1
   fi
 }
 
@@ -57,7 +57,7 @@ function gbh () {
   if [ -z "$1" ]; then
     red 'creating hotfix branch: missing required argument branch name'
   else
-    git checkout -b hotfix_$1
+    git checkout -b hotfix-$1
   fi
 }
 
@@ -65,7 +65,7 @@ function gbrc () {
   if [ -z "$1" ]; then
     red 'creating release candidate branch: missing required argument branch name'
   else
-    git checkout -b rc_$1
+    git checkout -b rc-$1
   fi
 }
 
