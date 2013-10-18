@@ -8,6 +8,7 @@ alias gm="git merge"
 alias gap="git add --patch"
 alias gss="git stash save"
 alias gsl="git stash list"
+alias git="hub"
 
 function gsa () {
   if [ -z "$1" ]; then
