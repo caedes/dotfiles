@@ -39,11 +39,10 @@ if type gclean > /dev/null; then
 fi
 
 function gclean () {
-  gcm &&
   ggpull &&
   git remote prune origin &&
   git fetch &&
-  git branch -a --merged | grep -v -E 'master|stable|staging' | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
+  git branch -a --merged | grep -v -E 'master|stable|staging|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
 }
 
 function gbf () {
