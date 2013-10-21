@@ -38,6 +38,8 @@ export CC=/usr/bin/gcc
 
 export PGHOST=/tmp
 
+export COMPANY=wopata
+
 # LOAD nvm COMMAND
 
 if [ -f ~/nvm/nvm.sh ]; then
