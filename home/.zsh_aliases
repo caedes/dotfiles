@@ -1,5 +1,10 @@
 # GIT
 
+# Fix oh-my-zsh's git plugin
+if type gclean > /dev/null; then
+  unalias gclean
+fi
+
 alias gds="git diff --staged"
 alias gaa="ga . -N"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
@@ -33,12 +38,7 @@ function gundo () {
   git reset HEAD `git status -s | tr -d 'M' | tr -d '\n'`
 }
 
-# Fix oh-my-zsh's git plugin conflict
-if type gclean > /dev/null; then
-  unalias gclean
-fi
-
-function gclean () {
+function gbclean () {
   ggpull &&
   git remote prune origin &&
   git fetch &&
