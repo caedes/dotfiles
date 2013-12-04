@@ -2,6 +2,8 @@
 	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
+		"AdvancedNewFile",
+		"Alignment",
 		"Auto Encoding for Ruby",
 		"CoffeeScript",
 		"Gist",
@@ -11,8 +13,12 @@
 		"Package Control",
 		"Rails Partial",
 		"RenameTab",
+		"RuboCop",
+		"Ruby 1.9 Hash Converter",
 		"Ruby Hash Reverter",
 		"Sass",
-		"Theme - Soda"
+		"SublimeGit",
+		"Theme - Soda",
+		"Zen Tabs"
 	]
 }
