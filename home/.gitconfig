@@ -8,3 +8,7 @@
   excludesfile = ~/.gitignore_global
 [include]
   path = ~/.gitconfig_secret
+[pull]
+  rebase = true
+[branch]
+  autosetuprebase = always
