@@ -309,3 +309,8 @@ alias sms="nocorrect sms"
 # CHROME
 
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+# MACOSX
+
+alias shf="defaults write com.apple.finder AppleShowAllFiles 1"
+alias hhf="defaults write com.apple.finder AppleShowAllFiles 0"

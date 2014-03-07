@@ -3,3 +3,6 @@ defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 0
+
+# Hide hidden files by default
+defaults write com.apple.finder AppleShowAllFiles 0
