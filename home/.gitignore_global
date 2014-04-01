@@ -51,3 +51,4 @@ rails_best_practices_output.html
 /coverage
 /sandi_meter
 __init__.py
+.rake_tasks
