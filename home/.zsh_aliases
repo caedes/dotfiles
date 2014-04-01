@@ -270,32 +270,32 @@ function delete() {
 
 function update () {
   # Upgrade dotfiles
-  cyan "\nDotfiles..." &&
+  cyan "\nDotfiles..."
   dotfiles && ggpull &&
-  homesick symlink dotfiles &&
-  green "Dotfiles updated.\n" &&
+  homesick symlink dotfiles
+  green "Dotfiles updated.\n"
 
   # Set OS X defaults
-  cyan "Default OSX config..." &&
-  $DOTFILES/osx/set-defaults.sh &&
-  green "Default OSX config updated.\n" &&
+  cyan "Default OSX config..."
+  $DOTFILES/osx/set-defaults.sh
+  green "Default OSX config updated.\n"
 
   # Upgrade heroku toolbelt
-  cyan "\nHeroku..." &&
-  heroku update &&
-  green "Heroku updated.\n" &&
+  cyan "\nHeroku..."
+  heroku update
+  green "Heroku updated.\n"
 
   # Upgrade Atom plugins
   if type atom > /dev/null; then
-    cyan "\nAtom plugins..." &&
-    apm upgrade &&
+    cyan "\nAtom plugins..."
+    apm upgrade
     green "Atom plugins updated.\n"
   fi
 
 
   if [ -z "$1" ]; then
-    cyan "\nReload..." &&
-    clear &&
+    cyan "\nReload..."
+    clear
     reload
   fi
 }
