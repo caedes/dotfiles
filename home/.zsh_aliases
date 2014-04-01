@@ -295,7 +295,6 @@ function update () {
 
   if [ -z "$1" ]; then
     cyan "\nReload..."
-    clear
     reload
   fi
 }
