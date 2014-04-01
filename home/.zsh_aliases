@@ -285,6 +285,14 @@ function update () {
   heroku update &&
   green "Heroku updated.\n" &&
 
+  # Upgrade Atom plugins
+  if type atom > /dev/null; then
+    cyan "\nAtom plugins..." &&
+    apm upgrade &&
+    green "Atom plugins updated.\n"
+  fi
+
+
   if [ -z "$1" ]; then
     cyan "\nReload..." &&
     clear &&
