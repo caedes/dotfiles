@@ -124,6 +124,8 @@ function init () {
   gem install bundler --pre && bundle -j4
 }
 
+alias migrate="rdm && rdtp"
+
 # POSTGRESQL
 
 function resetdb () {
