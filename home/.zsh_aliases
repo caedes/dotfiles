@@ -5,6 +5,7 @@ if type gclean > /dev/null; then
   unalias gclean
 fi
 
+alias gst="git status -sb"
 alias gds="git diff --staged"
 alias gaa="ga . -N"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
