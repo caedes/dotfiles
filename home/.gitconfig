@@ -8,3 +8,5 @@
   excludesfile = ~/.gitignore_global
 [include]
   path = ~/.gitconfig_secret
+[help]
+	autocorrect = 1
