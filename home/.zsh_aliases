@@ -15,6 +15,7 @@ alias gap="git add --patch"
 alias gss="git stash save"
 alias gsl="git stash list"
 alias git="hub"
+alias gsync="git fetch upstream && git merge upstream/master && ggpnp"
 
 function gsa () {
   if [ -z "$1" ]; then
