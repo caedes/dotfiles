@@ -98,10 +98,6 @@ function gpr () {
   git pull-request -b $COMPANY:$BASE -h $COMPANY:$HEAD
 }
 
-# EDITOR
-
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
 # SPORK
 
 alias td="nocorrect testdrb -Itest"
