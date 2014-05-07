@@ -228,6 +228,14 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
+function tree() {
+  if [ -z "$1" ]; then
+    red 'tree: missing required folder'
+  else
+    find $1 -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
+  fi
+}
+
 # HEROKU
 
 alias he="heroku"
