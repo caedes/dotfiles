@@ -112,7 +112,7 @@ alias frc="foreman run rails console"
 alias frg="foreman run guard --no-bundler-warning"
 alias bi="bundle install -j4"
 
-function init () {
+function rbenvinit () {
   if [ $# -eq 1 ]; then
     echo $1 > .ruby-version
   fi
