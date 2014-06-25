@@ -46,6 +46,7 @@ Thumbs.db
 *.gem
 .env
 .gems
+.nvmrc
 
 rails_best_practices_output.html
 /coverage
