@@ -311,7 +311,7 @@ function update () {
 
 function install_missing_brew_packages () {
   if which brew > /dev/null; then
-    brew install git tig hub rbenv ruby-build imagemagick node
+    brew install git tig hub rbenv ruby-build imagemagick node nvm
   fi
 }
 
