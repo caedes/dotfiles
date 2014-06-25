@@ -17,6 +17,9 @@ PROJECTS=~/Projects/
 plugins=(git rails brew cloudapp rake-fast)
 
 source $ZSH/oh-my-zsh.sh
+if brew list -1 | grep -q "^nvm\$"; then
+  source $(brew --prefix nvm)/nvm.sh
+fi
 
 export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
