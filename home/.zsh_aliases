@@ -129,7 +129,7 @@ function nvminit () {
     NODE_VERSION=$1
   fi
 
-  echo NODE_VERSION > .nvmrc
+  echo $NODE_VERSION > .nvmrc
 
   npm i
 }
