@@ -30,3 +30,8 @@ Powered by [Gulp](https://github.com/gulpjs/gulp).
 $ gulp docs
 $ gulp build
 ```
+
+## Documentation
+
+* [Main ZSH Aliases](zsh_aliases.html)
+* [Color ZSH Aliases](zsh_colors.html)
