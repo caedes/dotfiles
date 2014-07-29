@@ -8,11 +8,6 @@ var path = {
   src: ['README.md', 'home/zsh_aliases.sh', 'home/zsh_colors.sh']
 };
 
-gulp.task('clean', function(){
-  gulp.src(path.build, {read: false})
-    .pipe(clean());
-});
-
 gulp.task('docs', function () {
   gulp.src(path.src)
     .pipe(docco())

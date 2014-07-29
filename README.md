@@ -27,7 +27,6 @@ $ homesick symlink dotfiles
 Powered by [Gulp](https://github.com/gulpjs/gulp).
 
 ```bash
-$ gulp clean
 $ gulp docs
 $ gulp build
 ```
