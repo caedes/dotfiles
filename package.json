@@ -17,6 +17,11 @@
   },
   "homepage": "https://github.com/caedes/dotfiles",
   "dependencies": {
-    "docco": "^0.6.3"
+    "coffee-script": "^1.7.1",
+    "docco": "^0.6.3",
+    "gulp": "^3.8.6",
+    "gulp-clean": "^0.3.1",
+    "gulp-docco": "0.0.4",
+    "gulp-rename": "^1.2.0"
   }
 }

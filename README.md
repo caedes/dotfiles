@@ -21,3 +21,13 @@ With the castle cloned, link its contents into home dir:
 ```bash
 $ homesick symlink dotfiles
 ```
+
+## Build GitHub Pages
+
+Powered by [Gulp](https://github.com/gulpjs/gulp).
+
+```bash
+$ gulp clean
+$ gulp docs
+$ gulp build
+```
