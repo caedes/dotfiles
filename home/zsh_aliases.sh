@@ -1,22 +1,27 @@
-# GIT
+# # ZSH Aliases
+
+# ## GIT
+
+# Classico aliases
+alias gst="git status -sb"
+alias gds="git diff --staged"
+alias gaa="ga . -N"
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gm="git merge"
+alias gap="git add --patch"
+alias git="hub"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
   unalias gclean
 fi
 
-alias gst="git status -sb"
-alias gds="git diff --staged"
-alias gaa="ga . -N"
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cred [%cn]' --decorate --date=short"
-alias gm="git merge"
-alias gap="git add --patch"
-alias gss="git stash save"
-alias gsl="git stash list"
-alias git="hub"
+# Git Submodule
 alias gsync="git fetch upstream && git merge upstream/master && ggpnp"
 
+# Git Stash
+alias gss="git stash save"
+alias gsl="git stash list"
 function gsa () {
   if [ -z "$1" ]; then
     STASH=0
@@ -26,6 +31,10 @@ function gsa () {
   git stash apply stash@{$STASH}
 }
 
+# Pretty git logs
+alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cred [%cn]' --decorate --date=short"
+
+# All commits since a particular date
 function timesheet () {
   if [ -z "$1" ]; then
     SINCE="8am"
@@ -35,11 +44,13 @@ function timesheet () {
   git log --oneline --author="`git config --get user.name`" --since=$SINCE
 }
 
+# Undo last commit
 function gundo () {
   git reset --soft HEAD~1 &&
   git reset HEAD `git status -s | tr -d 'M' | tr -d '\n'`
 }
 
+# List all merged branches on local and remote
 function gbclean () {
   ggpull &&
   git remote prune origin &&
@@ -47,6 +58,7 @@ function gbclean () {
   git branch -a --merged | grep -v -E 'master|stable|staging|pull|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
 }
 
+# Create a feature branch
 function gbf () {
   if [ -z "$1" ]; then
     red 'creating feature branch: missing required argument branch name'
@@ -55,6 +67,7 @@ function gbf () {
   fi
 }
 
+# Create a hotfix branch
 function gbh () {
   if [ -z "$1" ]; then
     red 'creating hotfix branch: missing required argument branch name'
@@ -63,6 +76,7 @@ function gbh () {
   fi
 }
 
+# Create a release candidate branch
 function gbrc () {
   if [ -z "$1" ]; then
     red 'creating release candidate branch: missing required argument branch name'
@@ -71,6 +85,7 @@ function gbrc () {
   fi
 }
 
+# Add a tag with a particular version
 function gtag () {
   if [ -z "$1" ]; then
     red 'bumping version: missing required argument version number'
@@ -81,6 +96,7 @@ function gtag () {
   fi
 }
 
+# Create a pull request on GitHub
 function gpr () {
   if [ -z "$1" ]; then
     BASE='master'
@@ -98,11 +114,11 @@ function gpr () {
   git pull-request -b $COMPANY:$BASE -h $COMPANY:$HEAD
 }
 
-# SPORK
+# ## SPORK
 
 alias td="nocorrect testdrb -Itest"
 
-# RAILS
+# ## RAILS
 
 alias t="ruby -Itest"
 alias fs="foreman start"
@@ -111,6 +127,9 @@ alias sss="RAILS_ENV=test rake sunspot:solr:start"
 alias frc="foreman run rails console"
 alias frg="foreman run guard --no-bundler-warning"
 alias bi="bundle install -j4"
+alias migrate="rdm && rdtp"
+
+# ## RBENV
 
 function rbenvinit () {
   if [ $# -eq 1 ]; then
@@ -121,6 +140,8 @@ function rbenvinit () {
   reload
   gem install bundler --pre && bundle -j4
 }
+
+# ## NPM
 
 function nvminit () {
   if [ -z "$1" ]; then
@@ -134,9 +155,7 @@ function nvminit () {
   npm i
 }
 
-alias migrate="rdm && rdtp"
-
-# POSTGRESQL
+# ## POSTGRESQL
 
 function resetdb () {
   if [ -z "$1" ]; then
@@ -182,7 +201,7 @@ function hedumpdb () {
   fi
 }
 
-# ZSH
+# ## ZSH
 
 alias thin="nocorrect thin"
 alias thor="nocorrect thor"
@@ -195,17 +214,17 @@ alias reload="echo \`pwd\` > ~/.RELOAD && source ~/.zshrc"
 alias pk='nocorrect pk'
 alias reek='nocorrect reek -n -c ~/.reek'
 
-# SSH
+# ## SSH
 
 alias myssh="pbcopy < ~/.ssh/id_rsa.pub"
 
-# IP
+# ## IP
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en1"
 alias myip="localip"
 
-# ARCHIVE
+# ## ARCHIVE
 
 function extract () {
   if [ -f $1 ] ; then
@@ -228,7 +247,7 @@ function extract () {
   fi
 }
 
-# PATH
+# ## PATH
 
 alias l.='ls -ld .*'
 alias dotfiles="cd $DOTFILES"
@@ -248,7 +267,7 @@ function tree() {
   fi
 }
 
-# HEROKU
+# ## HEROKU
 
 alias he="heroku"
 
@@ -270,7 +289,7 @@ function deploy () {
   fi
 }
 
-# CURL
+# ## CURL
 
 function get() {
   curl -b /tmp/.curl_cookie -c /tmp/.curl_cookie "$@"
@@ -288,7 +307,7 @@ function delete() {
   get -X DELETE "$@"
 }
 
-# UPDATE
+# ## UPDATE
 
 function update () {
   # Upgrade dotfiles
@@ -331,24 +350,24 @@ function install_missing_brew_packages () {
   done
 }
 
-# XCODE
+# ## XCODE
 
 alias ios="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 
-# CLICKATELL
+# ## CLICKATELL
 
 alias sms="nocorrect sms"
 
-# CHROME
+# ## CHROME
 
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
-# MACOSX
+# ## MACOSX
 
 alias shf="defaults write com.apple.finder AppleShowAllFiles 1"
 alias hhf="defaults write com.apple.finder AppleShowAllFiles 0"
 
-# GRUNT
+# ## GRUNT
 
 function gi() {
   npm i -S grunt-"$@"
@@ -358,6 +377,6 @@ function gci() {
   npm i -S grunt-contrib-"$@"
 }
 
-# GULP
+# ## GULP
 
 alias gulp="gulp --require coffee-script"

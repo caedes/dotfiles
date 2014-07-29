@@ -53,14 +53,14 @@ fi
 
 # LOAD SHELL DEPENDENCIES
 
-if [ -f ~/.zsh_colors ]; then
-    . ~/.zsh_colors
+if [ -f ~/zsh_colors.sh ]; then
+    . ~/zsh_colors.sh
 fi
 
 # LOAD ALL ALIASES
 
-if [ -f ~/.zsh_aliases ]; then
-    . ~/.zsh_aliases
+if [ -f ~/zsh_aliases.sh ]; then
+    . ~/zsh_aliases.sh
 fi
 
 # Use .localrc for SUPER SECRET CRAP
