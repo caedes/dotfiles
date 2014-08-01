@@ -33,11 +33,15 @@ export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/adt-bundle-mac-x86_64/sdk/tools:$PATH"
 export PATH="$HOME/adt-bundle-mac-x86_64/sdk/platform-tools:$PATH"
-export PATH="./node_modules/.bin:$PATH"
 export PATH="./bin:$PATH"
+
+# Current node_modules path
+export PATH="./node_modules/.bin:$PATH"
+
+# Rbenv shims path
+export PATH="$HOME/.rbenv/shims:$PATH"
 
 export CC=/usr/bin/gcc
 
