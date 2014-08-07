@@ -391,4 +391,4 @@ function gci() {
 
 # ## GULP
 
-alias gulp="gulp --require coffee-script"
+alias gulp="nocorrect gulp"
