@@ -48,6 +48,7 @@ Thumbs.db
 .gems
 .nvmrc
 node_modules
+bower_components
 
 rails_best_practices_output.html
 /coverage
