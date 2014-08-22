@@ -126,7 +126,7 @@ alias fsd="foreman start -f Procfile.development"
 alias sss="RAILS_ENV=test rake sunspot:solr:start"
 alias frc="foreman run rails console"
 alias frg="foreman run guard --no-bundler-warning"
-alias bi="bundle install -j4"
+alias bi="bundle install"
 alias migrate="rdm && rdtp"
 
 # ## RBENV
