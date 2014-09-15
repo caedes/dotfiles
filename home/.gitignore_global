@@ -55,3 +55,4 @@ rails_best_practices_output.html
 /sandi_meter
 __init__.py
 .rake_tasks
+.pry_history
