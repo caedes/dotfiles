@@ -9,7 +9,6 @@ alias gaa="ga . -N"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gm="git merge"
 alias gap="git add --patch"
-alias git="hub"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
@@ -94,24 +93,6 @@ function gtag () {
     git tag v$1
     ggpush --tags
   fi
-}
-
-# Create a pull request on GitHub
-function gpr () {
-  if [ -z "$1" ]; then
-    BASE='master'
-  else
-    BASE=$1
-  fi
-
-  if [ -z "$2" ]; then
-    HEAD=`git rev-parse --abbrev-ref HEAD`
-  else
-    HEAD=$2
-  fi
-
-  green "$HEAD on $BASE"
-  git pull-request -b $COMPANY:$BASE -h $COMPANY:$HEAD
 }
 
 # ## SPORK
@@ -350,16 +331,6 @@ function update () {
     cyan "\nReload..."
     reload
   fi
-}
-
-function install_missing_brew_packages () {
-  for pkg in git tig hub rbenv ruby-build imagemagick node nvm; do
-    if brew list -1 | grep -q "^${pkg}\$"; then
-      echo "Package '$pkg' is installed"
-    else
-      brew install ${pkg}
-    fi
-  done
 }
 
 # ## XCODE
