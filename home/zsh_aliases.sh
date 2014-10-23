@@ -127,7 +127,7 @@ function rbenvinit () {
     echo $1 > .ruby-version
   fi
 
-  echo `basename $PWD` > .rbenv-gemsets
+  echo '.gems' > .rbenv-gemsets
   reload
   gem install bundler --pre && bundle -j4
 }
