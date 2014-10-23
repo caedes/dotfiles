@@ -101,10 +101,8 @@ alias td="nocorrect testdrb -Itest"
 
 # ## RAILS
 
-alias t="ruby -Itest"
 alias fs="foreman start"
 alias fsd="foreman start -f Procfile.development"
-alias sss="RAILS_ENV=test rake sunspot:solr:start"
 alias frc="foreman run rails console"
 alias frg="foreman run guard --no-bundler-warning"
 alias bi="bundle install"
