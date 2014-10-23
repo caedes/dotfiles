@@ -132,20 +132,6 @@ function rbenvinit () {
   gem install bundler --pre && bundle -j4
 }
 
-# ## NPM
-
-function nvminit () {
-  if [ -z "$1" ]; then
-    NODE_VERSION='0.10'
-  else
-    NODE_VERSION=$1
-  fi
-
-  echo $NODE_VERSION > .nvmrc
-
-  npm i
-}
-
 # ## POSTGRESQL
 
 function resetdb () {
