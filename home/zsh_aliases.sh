@@ -85,12 +85,18 @@ function gbrc () {
 }
 
 # Add a tag with a particular version
-function gtag () {
+function gt () {
   if [ -z "$1" ]; then
-    red 'bumping version: missing required argument version number'
+    red 'gt: missing required argument version number'
   else
-    git commit -am 'Bump version v'$1
-    git tag v$1
+    if [[ $1 == v* ]]; then
+      TAG=$1
+    else
+      TAG=v$1
+    fi
+
+    git commit -am 'Bump version '$TAG
+    git tag v$TAG
     ggpush --tags
   fi
 }
