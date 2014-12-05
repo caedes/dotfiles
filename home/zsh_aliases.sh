@@ -129,7 +129,7 @@ function rbenvinit () {
 
   echo '.gems' > .rbenv-gemsets
   reload
-  gem install bundler --pre && bundle -j4
+  gem install bundler && bundle
 }
 
 # ## POSTGRESQL
