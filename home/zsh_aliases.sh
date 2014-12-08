@@ -96,7 +96,7 @@ function gt () {
     fi
 
     git commit -am 'Bump version '$TAG
-    git tag v$TAG
+    git tag $TAG
     ggpush --tags
   fi
 }
