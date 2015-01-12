@@ -9,6 +9,7 @@ alias gaa="ga . -N"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gm="git merge"
 alias gap="git add --patch"
+alias gw="git add . && gc -m 'WIP'"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
