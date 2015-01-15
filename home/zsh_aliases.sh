@@ -364,3 +364,8 @@ function gci() {
 # ## GULP
 
 alias gulp="nocorrect gulp"
+
+# ## TOP
+
+alias top="vtop --theme monokai"
+alias oldtop="/usr/bin/top"
