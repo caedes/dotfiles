@@ -9,6 +9,7 @@ alias gaa="ga . -N"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gm="git merge"
 alias gap="git add --patch"
+alias gw="git add . && gc -m 'WIP'"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
@@ -85,12 +86,18 @@ function gbrc () {
 }
 
 # Add a tag with a particular version
-function gtag () {
+function gt () {
   if [ -z "$1" ]; then
-    red 'bumping version: missing required argument version number'
+    red 'gt: missing required argument version number'
   else
-    git commit -am 'Bump version v'$1
-    git tag v$1
+    if [[ $1 == v* ]]; then
+      TAG=$1
+    else
+      TAG=v$1
+    fi
+
+    git commit -am 'Bump version '$TAG
+    git tag $TAG
     ggpush --tags
   fi
 }
@@ -101,10 +108,8 @@ alias td="nocorrect testdrb -Itest"
 
 # ## RAILS
 
-alias t="ruby -Itest"
 alias fs="foreman start"
 alias fsd="foreman start -f Procfile.development"
-alias sss="RAILS_ENV=test rake sunspot:solr:start"
 alias frc="foreman run rails console"
 alias frg="foreman run guard --no-bundler-warning"
 alias bi="bundle install"
@@ -129,23 +134,9 @@ function rbenvinit () {
     echo $1 > .ruby-version
   fi
 
-  echo `basename $PWD` > .rbenv-gemsets
+  echo '.gems' > .rbenv-gemsets
   reload
-  gem install bundler --pre && bundle -j4
-}
-
-# ## NPM
-
-function nvminit () {
-  if [ -z "$1" ]; then
-    NODE_VERSION='0.10'
-  else
-    NODE_VERSION=$1
-  fi
-
-  echo $NODE_VERSION > .nvmrc
-
-  npm i
+  gem install bundler && bundle
 }
 
 # ## POSTGRESQL
@@ -363,3 +354,8 @@ function gci() {
 # ## GULP
 
 alias gulp="nocorrect gulp"
+
+# ## TOP
+
+alias top="vtop --theme monokai"
+alias oldtop="/usr/bin/top"

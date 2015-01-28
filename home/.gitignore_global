@@ -28,6 +28,7 @@
 *.sqlite3
 logfile
 *.dump
+dump.rdb
 
 # OS generated files #
 ######################
