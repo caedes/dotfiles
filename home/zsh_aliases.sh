@@ -317,16 +317,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias shf="defaults write com.apple.finder AppleShowAllFiles 1"
 alias hhf="defaults write com.apple.finder AppleShowAllFiles 0"
 
-# ## GRUNT
-
-function gi() {
-  npm i -S grunt-"$@"
-}
-
-function gci() {
-  npm i -S grunt-contrib-"$@"
-}
-
 # ## GULP
 
 alias gulp="nocorrect gulp"
