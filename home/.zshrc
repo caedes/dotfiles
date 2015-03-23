@@ -51,17 +51,24 @@ if [ -f ~/nvm/nvm.sh ]; then
   . ~/nvm/nvm.sh
 fi
 
-# LOAD SHELL DEPENDENCIES
+# LOAD SHELL ALIASES
 
-if [ -f ~/zsh_colors.sh ]; then
-    . ~/zsh_colors.sh
-fi
-
-# LOAD ALL ALIASES
-
-if [ -f ~/zsh_aliases.sh ]; then
-    . ~/zsh_aliases.sh
-fi
+. ~/.aliases/colors.sh
+. ~/.aliases/archive.sh
+. ~/.aliases/chrome.sh
+. ~/.aliases/curl.sh
+. ~/.aliases/git.sh
+. ~/.aliases/heroku.sh
+. ~/.aliases/ip.sh
+. ~/.aliases/osx.sh
+. ~/.aliases/path.sh
+. ~/.aliases/pg.sh
+. ~/.aliases/pow.sh
+. ~/.aliases/rails.sh
+. ~/.aliases/rbenv.sh
+. ~/.aliases/ssh.sh
+. ~/.aliases/text.sh
+. ~/.aliases/zsh.sh
 
 # Use .localrc for SUPER SECRET CRAP
 if [[ -a ~/.localrc ]]; then
