@@ -17,3 +17,7 @@ function powit() {
 
   echo "0.0.0.0:$port > $domain.dev"
 }
+
+function powrestart() {
+  touch ~/.pow/restart.txt
+}
