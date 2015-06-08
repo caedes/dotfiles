@@ -15,7 +15,7 @@ function powit() {
 
   echo $port > ~/.pow/$domain
 
-  echo "0.0.0.0:$port > $domain.dev"
+  echo "localhost:$port > $domain.dev"
 }
 
 function powrestart() {
