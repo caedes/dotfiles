@@ -13,7 +13,7 @@ alias gulp="nocorrect gulp"
 function update () {
   # Upgrade dotfiles
   cyan "\nDotfiles..."
-  dotfiles && ggpull &&
+  dotfiles && ggl &&
   homesick symlink dotfiles
   green "Dotfiles updated.\n"
 

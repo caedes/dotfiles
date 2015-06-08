@@ -48,7 +48,7 @@ function gundo () {
 
 # List all merged branches on local and remote
 function gbclean () {
-  ggpull &&
+  ggl &&
   git remote prune origin &&
   git fetch &&
   git branch -a --merged | grep -v -E 'master|stable|staging|pull|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
@@ -94,6 +94,6 @@ function gt () {
 
     git commit -am 'Bump version '$TAG
     git tag $TAG
-    ggpush --tags
+    ggp --tags
   fi
 }
