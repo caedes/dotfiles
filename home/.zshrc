@@ -69,6 +69,7 @@ fi
 . ~/.aliases/ssh.sh
 . ~/.aliases/text.sh
 . ~/.aliases/zsh.sh
+. ~/.aliases/atom.sh
 
 # Use .localrc for SUPER SECRET CRAP
 if [[ -a ~/.localrc ]]; then
