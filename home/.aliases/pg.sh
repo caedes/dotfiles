@@ -34,9 +34,9 @@ function hedumpdb () {
   if [ -z "$1" ]; then
     red 'hedumpdb: missing required argument app name'
   else
-    heroku pgbackups:capture --expire --app $1
+    heroku pg:backups capture --app $1
     now=`date +%Y%m%d%H%M%S`
-    backup_url=`heroku pgbackups:url --app $1`
+    backup_url=`heroku pg:backups public-url --app $1`
     echo "curl -o $1_$now.dump $backup_url" | pbcopy
     green 'curl dump copy in clipboard'
   fi
