@@ -1,6 +1,6 @@
 alias fs="foreman start"
 alias fsd="foreman start -f Procfile.development"
 alias frc="foreman run rails console"
-alias frg="foreman run guard --no-bundler-warning"
+alias frg="foreman run guard --no-bundler-warning -c"
 alias bi="bundle install"
 alias migrate="rdm && rdtp"
