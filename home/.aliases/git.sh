@@ -37,7 +37,7 @@ function timesheet () {
   else
     SINCE=$1
   fi
-  git log --oneline --author="`git config --get user.name`" --since=$SINCE
+  gll --date=iso --author="`git config --get user.name`" --since=$SINCE
 }
 
 # Undo last commit
