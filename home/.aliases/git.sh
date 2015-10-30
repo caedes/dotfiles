@@ -93,6 +93,7 @@ function gt () {
     fi
 
     git commit -am 'Bump version '$TAG
+    ggp
     git tag $TAG
     ggp --tags
   fi
