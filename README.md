@@ -13,7 +13,7 @@ $ gem install homesick
 Next, use the homesick command to clone the castle:
 
 ```bash
-$ homesick clone git://github.com/caedes/dotfiles.git
+$ homesick clone caedes/dotfiles
 ```
 
 With the castle cloned, link its contents into home dir:
