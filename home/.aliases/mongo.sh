@@ -12,7 +12,7 @@ function hedumpmongo () {
     user=$(echo $fucked_user | cut -c3-100)
     password=$(echo $protocol_auth | cut -d':' -f 3)
     now=`date +%Y%m%d%H%M%S`
-    echo "mongodump -h $host -d $db -u $user -p $password -o $1_$now.dump" | pbcopy
+    echo "mongodump -h $host -d $db -u $user -p $password -c docs -o $1_$now.dump" | pbcopy
     green 'mongodump copy in clipboard'
   fi
 }
