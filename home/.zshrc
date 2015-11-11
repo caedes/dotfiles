@@ -55,7 +55,6 @@ fi
 . ~/.aliases/colors.sh
 . ~/.aliases/archive.sh
 . ~/.aliases/chrome.sh
-. ~/.aliases/curl.sh
 . ~/.aliases/git.sh
 . ~/.aliases/heroku.sh
 . ~/.aliases/ip.sh

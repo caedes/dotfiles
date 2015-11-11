@@ -21,3 +21,7 @@ With the castle cloned, link its contents into home dir:
 ```shell
 homesick symlink dotfiles
 ```
+
+## cURL aliases
+
+**No more cURL please.** Use [HTTPie](https://github.com/jkbrzt/httpie)
