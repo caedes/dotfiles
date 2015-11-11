@@ -43,5 +43,3 @@ function update () {
 
 alias top="vtop --theme monokai"
 alias oldtop="/usr/bin/top"
-
-alias fu='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
