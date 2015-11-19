@@ -83,9 +83,4 @@ fi
 
 # DEFAULT DIRECTORY
 
-if [ -f ~/.RELOAD ]; then
-  cd $(cat ~/.RELOAD)
-  rm ~/.RELOAD
-else
-  cd $PROJECTS
-fi
+cd $PROJECTS
