@@ -67,7 +67,6 @@ fi
 . ~/.aliases/ssh.sh
 . ~/.aliases/text.sh
 . ~/.aliases/zsh.sh
-. ~/.aliases/atom.sh
 . ~/.aliases/mongo.sh
 
 # Use .localrc for SUPER SECRET CRAP
