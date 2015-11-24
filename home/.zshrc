@@ -42,6 +42,8 @@ export CC=/usr/bin/gcc
 
 export PGHOST=/tmp
 
+eval "$(rbenv init -)"
+
 # LOAD nvm COMMAND
 
 if [ -f ~/nvm/nvm.sh ]; then
