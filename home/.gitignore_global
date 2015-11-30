@@ -43,7 +43,6 @@ Thumbs.db
 
 .rvmrc
 .rbenv-gemsets
-.ruby-version
 *.gem
 .env
 .gems
