@@ -17,5 +17,4 @@ function rbenvinit () {
 
   echo '.gems' > .rbenv-gemsets
   reload
-  gem install bundler && bundle
 }
