@@ -2,3 +2,5 @@ Encoding:
   Enabled: false
 Documentation:
   Enabled: false
+Style/MultilineOperationIndentation:
+  Enabled: false
