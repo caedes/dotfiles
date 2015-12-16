@@ -4,3 +4,5 @@ Documentation:
   Enabled: false
 Style/MultilineOperationIndentation:
   Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
