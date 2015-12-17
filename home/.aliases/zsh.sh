@@ -14,7 +14,7 @@ function update () {
   # Upgrade dotfiles
   cyan "\nDotfiles..."
   dotfiles && ggl &&
-  homesick symlink dotfiles
+  bundle exec homesick symlink dotfiles
   green "Dotfiles updated.\n"
 
   # Set OS X defaults
@@ -24,7 +24,7 @@ function update () {
 
   # Upgrade heroku toolbelt
   cyan "\nHeroku..."
-  heroku update
+  brew upgrade heroku-toolbelt
   green "Heroku updated.\n"
 
   # Upgrade Atom plugins
