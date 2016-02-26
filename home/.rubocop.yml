@@ -1,17 +1,42 @@
-Encoding:
+Metrics/AbcSize:
+  Max: 18
+
+Metrics/LineLength:
+  Max: 90
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/Documentation:
   Enabled: false
-Documentation:
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Style/MultilineBlockChain:
   Enabled: false
-Style/MultilineOperationIndentation:
-  Enabled: false
+
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
-    '%':  []
-    '%i': []
-    '%q': []
-    '%Q': []
+    '%':  '{}'
+    '%i': '[]'
+    '%q': '{}'
+    '%Q': '{}'
     '%r': '{}'
-    '%s': []
-    '%w': []
-    '%W': []
-    '%x': []
+    '%s': '{}'
+    '%w': '[]'
+    '%W': '[]'
+    '%x': '{}'
+
+Style/PredicateName:
+  NamePrefixBlacklist:
+    - is_
+
+Style/RegexpLiteral:
+  EnforcedStyle: mixed
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
