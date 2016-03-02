@@ -4,6 +4,9 @@ Metrics/AbcSize:
 Metrics/LineLength:
   Max: 90
 
+Rails:
+  Enabled: true
+
 Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
