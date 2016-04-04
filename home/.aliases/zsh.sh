@@ -5,7 +5,6 @@ alias grunt="nocorrect grunt"
 alias guard="nocorrect bundle exec guard --no-bundler-warning"
 alias neat="nocorrect neat"
 alias rspec="nocorrect rspec"
-alias reload="source ~/.zshrc && cd -"
 alias pk='nocorrect pk'
 alias reek='nocorrect reek -n -c ~/.reek'
 alias gulp="nocorrect gulp"

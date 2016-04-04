@@ -50,6 +50,8 @@ if [ -f ~/nvm/nvm.sh ]; then
   . ~/nvm/nvm.sh
 fi
 
+alias reload="source ~/.zshrc && cd -"
+
 # LOAD SHELL ALIASES
 
 . ~/.aliases/colors.sh
