@@ -1,5 +1,5 @@
 AllCops:
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 2.3
 
 Metrics/AbcSize:
   Max: 18
@@ -14,6 +14,9 @@ Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
 Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
   Enabled: false
 
 Style/IndentHash:
