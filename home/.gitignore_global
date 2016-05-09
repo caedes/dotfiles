@@ -56,3 +56,4 @@ rails_best_practices_output.html
 __init__.py
 .rake_tasks
 .pry_history
+passenger.*.pid.lock
