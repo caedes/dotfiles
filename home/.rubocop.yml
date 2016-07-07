@@ -1,5 +1,12 @@
 AllCops:
   TargetRubyVersion: 2.3
+  Exclude:
+    - "vendor/**/*"
+    - "node_modules/**/*"
+    - "db/schema.rb"
+
+Lint/NestedMethodDefinition:
+  Enabled: false
 
 Metrics/AbcSize:
   Max: 18
@@ -43,6 +50,9 @@ Style/PredicateName:
 
 Style/RegexpLiteral:
   EnforcedStyle: mixed
+
+Style/SignalException:
+  EnforcedStyle: semantic
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
