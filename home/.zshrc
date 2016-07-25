@@ -54,12 +54,14 @@ alias reload="source ~/.zshrc && cd -"
 
 # LOAD SHELL ALIASES
 
-. ~/.aliases/colors.sh
+. ~/.aliases/colors.sh # Must be first included
 . ~/.aliases/archive.sh
 . ~/.aliases/chrome.sh
 . ~/.aliases/git.sh
 . ~/.aliases/heroku.sh
 . ~/.aliases/ip.sh
+. ~/.aliases/mongo.sh
+. ~/.aliases/node.sh
 . ~/.aliases/osx.sh
 . ~/.aliases/path.sh
 . ~/.aliases/pg.sh
@@ -69,7 +71,6 @@ alias reload="source ~/.zshrc && cd -"
 . ~/.aliases/ssh.sh
 . ~/.aliases/text.sh
 . ~/.aliases/zsh.sh
-. ~/.aliases/mongo.sh
 
 # Use .localrc for SUPER SECRET CRAP
 if [[ -a ~/.localrc ]]; then
