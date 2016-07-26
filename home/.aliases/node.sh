@@ -1,1 +1,1 @@
-alias em="ember"
+alias ems="ember server"
