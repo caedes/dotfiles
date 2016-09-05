@@ -88,7 +88,8 @@ function gblec () {
     if [ -z "$2" ]; then
         red 'creating LEC branch: missing required argument feature name'
     else
-      git checkout -b lec_$1_$2
+      branch=`echo $2 | sed 's/-/_/'`
+      git checkout -b lec_$1_$branch
     fi
   fi
 }
