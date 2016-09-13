@@ -58,7 +58,7 @@ function gbf () {
   if [ -z "$1" ]; then
     red 'creating feature branch: missing required argument branch name'
   else
-    branch=`echo $1 | sed 's/-/_/'`
+    branch=`echo $1 | sed 's/-/_/g'`
     git checkout -b feature_$branch
   fi
 }
@@ -68,7 +68,7 @@ function gbh () {
   if [ -z "$1" ]; then
     red 'creating hotfix branch: missing required argument branch name'
   else
-    branch=`echo $1 | sed 's/-/_/'`
+    branch=`echo $1 | sed 's/-/_/g'`
     git checkout -b hotfix_$branch
   fi
 }
@@ -78,7 +78,7 @@ function gbrc () {
   if [ -z "$1" ]; then
     red 'creating release candidate branch: missing required argument branch name'
   else
-    branch=`echo $1 | sed 's/-/_/'`
+    branch=`echo $1 | sed 's/-/_/g'`
     git checkout -b rc_$branch
   fi
 }
@@ -91,7 +91,7 @@ function gblec () {
     if [ -z "$2" ]; then
         red 'creating LEC branch: missing required argument feature name'
     else
-      branch=`echo $2 | sed 's/-/_/'`
+      branch=`echo $2 | sed 's/-/_/g'`
       git checkout -b lec_$1_$branch
     fi
   fi
