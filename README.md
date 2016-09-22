@@ -1,6 +1,7 @@
 # dotfiles
 
 [![license](https://img.shields.io/github/license/caedes/dotfiles.svg?maxAge=2592000?style=plastic)](LICENSE.md)
+[![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/caedes)
 
 My personal dotfiles with [Homesick](https://github.com/technicalpickles/homesick).
 
