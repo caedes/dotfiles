@@ -32,7 +32,6 @@ export PATH="$HOME/bin:$PATH"
 export PATH=/usr/local/pgsql/bin:$PATH
 export PATH=/usr/local/heroku/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="./node_modules/.bin:$PATH"

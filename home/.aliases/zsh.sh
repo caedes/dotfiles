@@ -1,6 +1,5 @@
 alias thin="nocorrect thin"
 alias thor="nocorrect thor"
-alias npm="nocorrect npm"
 alias grunt="nocorrect grunt"
 alias guard="nocorrect bundle exec guard --no-bundler-warning"
 alias neat="nocorrect neat"
