@@ -31,3 +31,8 @@ homesick symlink dotfiles
 ## License
 
 My dotfiles are released under the [MIT license](LICENSE.md).
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/caedes/dotfiles/badge.svg?style=beer-square)](https://beerpay.io/caedes/dotfiles)  [![Beerpay](https://beerpay.io/caedes/dotfiles/make-wish.svg?style=flat-square)](https://beerpay.io/caedes/dotfiles?focus=wish)
