@@ -59,7 +59,7 @@ function gbf () {
     red 'creating feature branch: missing required argument branch name'
   else
     branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b feature_$branch
+    git checkout -b feature/$branch
   fi
 }
 
@@ -69,7 +69,7 @@ function gbh () {
     red 'creating hotfix branch: missing required argument branch name'
   else
     branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b hotfix_$branch
+    git checkout -b hotfix/$branch
   fi
 }
 
@@ -79,7 +79,7 @@ function gbrc () {
     red 'creating release candidate branch: missing required argument branch name'
   else
     branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b rc_$branch
+    git checkout -b rc/$branch
   fi
 }
 
