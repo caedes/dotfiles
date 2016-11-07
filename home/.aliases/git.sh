@@ -83,20 +83,6 @@ function gbrc () {
   fi
 }
 
-# Create a LEC branch
-function gblec () {
-  if [ -z "$1" ]; then
-    red 'creating LEC branch: missing required argument LEC ticket number'
-  else
-    if [ -z "$2" ]; then
-        red 'creating LEC branch: missing required argument feature name'
-    else
-      branch=`echo $2 | sed 's/-/_/g'`
-      git checkout -b lec_$1_$branch
-    fi
-  fi
-}
-
 # Add a tag with a particular version
 function gt () {
   if [ -z "$1" ]; then
