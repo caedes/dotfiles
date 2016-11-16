@@ -26,6 +26,15 @@ With the castle cloned, link its contents into home dir:
 homesick symlink dotfiles
 ```
 
+## Homebrew
+
+After installing [Homebrew](http://brew.sh/) just run in your `~` directory:
+
+```shell
+brew tap homebrew/bundle
+brew bundle
+```
+
 ## cURL aliases
 
 **No more cURL please.** Use [HTTPie](https://github.com/jkbrzt/httpie)
