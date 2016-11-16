@@ -1,12 +1,14 @@
-alias thin="nocorrect thin"
-alias thor="nocorrect thor"
 alias grunt="nocorrect grunt"
 alias guard="nocorrect bundle exec guard --no-bundler-warning"
+alias gulp="nocorrect gulp"
 alias neat="nocorrect neat"
-alias rspec="nocorrect rspec"
+alias oldtop="/usr/bin/top"
 alias pk='nocorrect pk'
 alias reek='nocorrect reek -n -c ~/.reek'
-alias gulp="nocorrect gulp"
+alias rspec="nocorrect rspec"
+alias thin="nocorrect thin"
+alias thor="nocorrect thor"
+alias top="vtop --theme monokai"
 
 function update () {
   # Upgrade dotfiles
@@ -38,6 +40,3 @@ function update () {
     reload
   fi
 }
-
-alias top="vtop --theme monokai"
-alias oldtop="/usr/bin/top"
