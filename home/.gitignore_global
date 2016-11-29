@@ -57,3 +57,5 @@ __init__.py
 .rake_tasks
 .pry_history
 passenger.*.pid.lock
+/tmp
+/temp
