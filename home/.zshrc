@@ -31,6 +31,7 @@ export PATH=/usr/local/heroku/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
 export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="`yarn global bin`:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="./bin:$PATH"
 
