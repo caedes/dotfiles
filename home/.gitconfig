@@ -9,7 +9,7 @@
 [include]
   path = ~/.gitconfig_secret
 [help]
-	autocorrect = 1
+	autocorrect = -1
 [credential]
 	helper = osxkeychain
 [rerere]
