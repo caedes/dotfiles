@@ -42,7 +42,7 @@ function timesheet () {
 # Undo last commit
 function gundo () {
   git reset --soft HEAD~1 &&
-  git reset HEAD `git status -s | tr -d 'M' | tr -d '\n'`
+  git reset .
 }
 
 # List all merged branches on local and remote
