@@ -29,16 +29,6 @@ function gsa () {
 # Pretty git logs
 alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cred [%cn]' --decorate --date=short"
 
-# All commits since a particular date
-function timesheet () {
-  if [ -z "$1" ]; then
-    SINCE="8am"
-  else
-    SINCE=$1
-  fi
-  gll --date=iso --author="`git config --get user.name`" --since=$SINCE
-}
-
 # Undo last commit
 function gundo () {
   git reset --soft HEAD~1 &&
