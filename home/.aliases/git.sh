@@ -5,6 +5,7 @@ alias gds="git diff --staged"
 alias gm="git merge"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst="git status -sb"
+alias gt="git tag"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
