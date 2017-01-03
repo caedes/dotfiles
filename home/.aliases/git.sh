@@ -1,10 +1,10 @@
 # Classico aliases
-alias gst="git status -sb"
-alias gds="git diff --staged"
 alias gaa="ga . -N"
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gm="git merge"
 alias gap="git add --patch"
+alias gds="git diff --staged"
+alias gm="git merge"
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gst="git status -sb"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
