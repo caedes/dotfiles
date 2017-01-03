@@ -72,21 +72,3 @@ function gbrc () {
     git checkout -b rc/$branch
   fi
 }
-
-# Add a tag with a particular version
-function gt () {
-  if [ -z "$1" ]; then
-    red 'gt: missing required argument version number'
-  else
-    if [[ $1 == v* ]]; then
-      TAG=$1
-    else
-      TAG=v$1
-    fi
-
-    git commit -am 'Bump version '$TAG
-    ggp
-    git tag $TAG
-    ggp --tags
-  fi
-}
