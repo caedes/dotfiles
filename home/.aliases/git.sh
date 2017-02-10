@@ -41,7 +41,7 @@ function gbclean () {
   ggl &&
   git remote prune origin &&
   git fetch &&
-  git branch -a --merged | grep -v -E 'master|stable|staging|pull|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
+  git branch -a --merged | grep -v -E 'master|stable|staging|pull|release|develop|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
 }
 
 # Create a feature branch
