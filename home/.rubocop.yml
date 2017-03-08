@@ -12,7 +12,7 @@ Metrics/AbcSize:
   Max: 18
 
 Metrics/LineLength:
-  Max: 90
+  Max: 110
 
 Rails:
   Enabled: true
