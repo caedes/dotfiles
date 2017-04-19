@@ -6,6 +6,7 @@ alias gm="git merge"
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gst="git status -sb"
 alias gt="git tag"
+alias gcz="git cz"
 
 # Fix oh-my-zsh's git plugin
 if type gclean > /dev/null; then
