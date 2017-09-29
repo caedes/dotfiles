@@ -67,12 +67,12 @@ function gbh () {
   fi
 }
 
-# Create a release candidate branch
-function gbrc () {
+# Create a release branch
+function gbrelease () {
   if [ -z "$1" ]; then
-    red 'creating release candidate branch: missing required argument branch name'
+    red 'creating release branch: missing required argument branch name'
   else
     branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b rc/$branch
+    git checkout -b release/$branch
   fi
 }
