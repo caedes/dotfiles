@@ -46,3 +46,19 @@ function update () {
     reload
   fi
 }
+
+function cleanup () {
+  # Clean Brew former plugins
+  if type brew > /dev/null; then
+    cyan "\nBrew clean..."
+    brew cleanup
+    green "Brew cleaned.\n"
+  fi
+
+  # Clean Yarn cache folder
+  if type yarn > /dev/null; then
+    cyan "\nYarn cache cleanup..."
+    yarn cache clean
+    green "Yarn cache cleaned.\n"
+  fi
+}
