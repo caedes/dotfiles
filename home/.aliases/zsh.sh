@@ -34,6 +34,12 @@ function update () {
     green "Atom plugins updated.\n"
   fi
 
+  # Update Brew list plugins
+  if type brew > /dev/null; then
+    cyan "\nBrew update..."
+    brew upgrade
+    green "Brew updated.\n"
+  fi
 
   if [ -z "$1" ]; then
     cyan "\nReload..."
