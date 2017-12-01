@@ -39,6 +39,8 @@ export CC=/usr/bin/gcc
 
 export PGHOST=/tmp
 
+export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397,26.0.2
+
 eval "$(rbenv init -)"
 
 # LOAD nvm COMMAND
