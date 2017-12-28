@@ -14,6 +14,8 @@ PROJECTS=~/Projects/
 plugins=(brew cloudapp git gitignore git-flow-completion rails rake-fast)
 
 source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR=~/.nvm
 if brew list -1 | grep -q "^nvm\$"; then
   source $(brew --prefix nvm)/nvm.sh
 fi
@@ -42,12 +44,6 @@ export PGHOST=/tmp
 export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397,26.0.2
 
 eval "$(rbenv init -)"
-
-# LOAD nvm COMMAND
-
-if [ -f ~/nvm/nvm.sh ]; then
-  . ~/nvm/nvm.sh
-fi
 
 alias reload="source ~/.zshrc && cd -"
 
