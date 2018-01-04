@@ -1,0 +1,28 @@
+{
+  "name": "dotfiles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "[![license](https://img.shields.io/github/license/caedes/dotfiles.svg?maxAge=2592000?style=plastic)](LICENSE.md) [![Beerpay](https://img.shields.io/beerpay/hashdog/scrapfy-chrome-extension.svg?maxAge=2592000)](https://beerpay.io/caedes/dotfiles) [![Twitter URL](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&maxAge=2592000)](https://twitter.com/caedes)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caedes/dotfiles.git"
+  },
+  "author": "caedes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caedes/dotfiles/issues"
+  },
+  "homepage": "https://github.com/caedes/dotfiles#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
