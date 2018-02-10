@@ -1,5 +1,7 @@
 alias ems="ember server"
+alias n="npm"
 alias ni="npm install"
 alias nr="npm run"
 alias ns="npm start"
 alias nt="npm test"
+alias y="yarn"

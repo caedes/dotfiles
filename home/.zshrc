@@ -53,6 +53,7 @@ alias reload="source ~/.zshrc && cd -"
 . ~/.aliases/colors.sh # Must be first included
 . ~/.aliases/archive.sh
 . ~/.aliases/chrome.sh
+. ~/.aliases/editor.sh
 . ~/.aliases/git.sh
 . ~/.aliases/heroku.sh
 . ~/.aliases/ip.sh
