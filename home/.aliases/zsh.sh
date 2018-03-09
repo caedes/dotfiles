@@ -27,18 +27,11 @@ function update () {
   brew upgrade heroku-toolbelt
   green "Heroku updated.\n"
 
-  # Upgrade Atom plugins
-  if type atom > /dev/null; then
-    cyan "\nAtom plugins..."
-    apm upgrade
-    green "Atom plugins updated.\n"
-  fi
-
   # Update Brew list plugins
   if type brew > /dev/null; then
-    cyan "\nBrew update..."
-    brew upgrade
-    green "Brew updated.\n"
+    cyan "\nBrew plugins list update..."
+    brew update
+    green "Brew plugins list updated.\n"
   fi
 
   if [ -z "$1" ]; then
