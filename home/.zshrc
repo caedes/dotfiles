@@ -11,7 +11,7 @@ DOTFILES=~/.homesick/repos/dotfiles
 
 PROJECTS=~/Projects/
 
-plugins=(brew cloudapp git gitignore git-flow-completion rails rake-fast)
+plugins=(brew cloudapp git gitignore git-flow-completion rails rake-fast yarn-autocompletions)
 
 source $ZSH/oh-my-zsh.sh
 
