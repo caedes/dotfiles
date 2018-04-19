@@ -61,3 +61,7 @@ node_modules
 bower_components
 /tmp
 /temp
+
+# Visual Studio Code related files #
+####################################
+.vscode
