@@ -22,16 +22,10 @@ function update () {
   $DOTFILES/osx/set-defaults.sh
   green "Default OSX config updated.\n"
 
-  # Upgrade heroku toolbelt
-  cyan "\nHeroku..."
-  brew upgrade heroku-toolbelt
-  green "Heroku updated.\n"
-
-  # Update Brew list plugins
+  # Outdated Brew plugins list
   if type brew > /dev/null; then
-    cyan "\nBrew plugins list update..."
-    brew update
-    green "Brew plugins list updated.\n"
+    cyan "\nOutdated Brew plugins"
+    brew outdated
   fi
 
   if [ -z "$1" ]; then
