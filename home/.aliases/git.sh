@@ -39,13 +39,13 @@ function gundo () {
   git reset .
 }
 
-# List all merged branches on local and remote
+# Clean branches on local and remote
 function gbclean () {
   gcm &&
   ggl &&
   git fetch --all &&
   git remote prune origin &&
-  git branch -a --merged | grep -v -E 'master|stable|staging|develop|release|'`git rev-parse --abbrev-ref HEAD` | sed 's/^/git branch -d/' | sed 's/branch -d  remotes\/origin\//push origin :/'
+  gb -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs gb -d
 }
 
 # Create a feature branch
