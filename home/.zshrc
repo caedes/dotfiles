@@ -23,7 +23,7 @@ if brew list -1 | grep -q "^nvm\$"; then
   source $(brew --prefix nvm)/nvm.sh
 fi
 
-export PATH="/usr/local/opt/node@8/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
