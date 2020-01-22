@@ -13,4 +13,8 @@
 [credential]
 	helper = osxkeychain
 [rerere]
-	enabled = true
+  enabled = true
+[includeIf "gitdir:~/cdiscount/"]
+  path = ~/cdiscount/.gitconfig
+[includeIf "gitdir:~/personal/"]
+  path = ~/personal/.gitconfig
