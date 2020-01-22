@@ -15,6 +15,6 @@
 [rerere]
   enabled = true
 [includeIf "gitdir:~/cdiscount/"]
-  path = ~/cdiscount/.gitconfig
+  path = ~/Projects/cdiscount/.gitconfig
 [includeIf "gitdir:~/personal/"]
-  path = ~/personal/.gitconfig
+  path = ~/Projects/personal/.gitconfig
