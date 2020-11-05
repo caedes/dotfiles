@@ -19,7 +19,7 @@ plugins=(brew cloudapp git gitignore git-flow-completion rails rake-fast yarn-au
 source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR=~/.nvm
-if brew list -1 | grep -q "^nvm\$"; then
+if brew list --formula -1 | grep -q "^nvm\$"; then
   source $(brew --prefix nvm)/nvm.sh
 fi
 
