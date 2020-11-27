@@ -17,11 +17,6 @@ function update () {
   bundle exec homesick symlink dotfiles
   green "Dotfiles updated.\n"
 
-  # Set OS X defaults
-  cyan "Default OSX config..."
-  $DOTFILES/osx/set-defaults.sh
-  green "Default OSX config updated.\n"
-
   # Outdated Brew plugins list
   if type brew > /dev/null; then
     cyan "\nOutdated Brew plugins"

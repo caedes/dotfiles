@@ -62,7 +62,6 @@ alias reload="source ~/.zshrc && cd -"
 . ~/.aliases/ip.sh
 . ~/.aliases/mongo.sh
 . ~/.aliases/node.sh
-. ~/.aliases/osx.sh
 . ~/.aliases/path.sh
 . ~/.aliases/pg.sh
 . ~/.aliases/rails.sh
