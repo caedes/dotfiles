@@ -5,25 +5,16 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="spaceship"
+ZSH_THEME="miloshadzic"
 
-# Spaceship prompt configuration
-SPACESHIP_BATTERY_THRESHOLD=50
+PROJECTS=~/Documents/projects/
 
-DOTFILES=~/.homesick/repos/dotfiles
+plugins=(brew git gitignore)
 
-PROJECTS=~/Projects/
-
-plugins=(brew cloudapp git gitignore git-flow-completion rails rake-fast yarn-autocompletions)
+ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
-export NVM_DIR=~/.nvm
-if brew list --formula -1 | grep -q "^nvm\$"; then
-  source $(brew --prefix nvm)/nvm.sh
-fi
-
-export PATH="/usr/local/opt/node@10/bin:$PATH"
 export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -32,22 +23,12 @@ export PATH=/sbin:$PATH
 export PATH=/usr/X11/bin:$PATH
 export PATH=/usr/libexec:$PATH
 export PATH="$HOME/bin:$PATH"
-export PATH=/usr/local/pgsql/bin:$PATH
-export PATH=/usr/local/heroku/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=/Applications/Postgres.app/Contents/MacOS/bin:$PATH
-export PATH="$HOME/.rbenv/shims:$PATH"
-export PATH="`yarn global bin`:$PATH"
 export PATH="./node_modules/.bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="./bin:$PATH"
 
-export CC=/usr/bin/gcc
-
-export PGHOST=/tmp
-
-export ANDROID_HOME=/usr/local/Caskroom/android-sdk/3859397,26.0.2
-
-eval "$(rbenv init -)"
+NPM_CONFIG_PREFIX=~/.npm-global
 
 alias reload="source ~/.zshrc && cd -"
 
