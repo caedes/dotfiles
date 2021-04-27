@@ -30,6 +30,13 @@ export PATH="./bin:$PATH"
 
 NPM_CONFIG_PREFIX=~/.npm-global
 
+export HTTP_PROXY="http://127.0.0.1:3128/"
+export HTTPS_PROXY="http://127.0.0.1:3128/"
+export http_proxy="http://127.0.0.1:3128/"
+export https_proxy="http://127.0.0.1:3128/"
+export NO_PROXY="localhost,127.0.0.1,localaddress,*.localdomain.com,*.cdweb.biz,*.cdbdx.biz,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
+export no_proxy="localhost,127.0.0.1,localaddress,*.localdomain.com,*.cdweb.biz,*.cdbdx.biz,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
+
 alias reload="source ~/.zshrc && cd -"
 
 # LOAD SHELL ALIASES
