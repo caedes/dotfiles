@@ -14,7 +14,7 @@
 	helper = osxkeychain
 [rerere]
   enabled = true
-[includeIf "gitdir:~/Projects/cdiscount/"]
-  path = ~/Projects/cdiscount/.gitconfig
-[includeIf "gitdir:~/Projects/personal/"]
-  path = ~/Projects/personal/.gitconfig
+[includeIf "gitdir:~/Documents/projects/cdiscount/"]
+  path = ~/Documents/projects/cdiscount/.gitconfig
+[includeIf "gitdir:~/Documents/projects/personal/"]
+  path = ~/Documents/projects/personal/.gitconfig
