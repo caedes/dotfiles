@@ -41,6 +41,8 @@ export http_proxy=$PROXY
 export https_proxy=$PROXY
 export NO_PROXY=$NO_PROXY
 export no_proxy=$NO_PROXY
+export YARN_PROXY=""
+export YARN_HTTPS_PROXY=""
 
 alias reload="source ~/.zshrc && cd -"
 
