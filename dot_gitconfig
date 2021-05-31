@@ -4,17 +4,21 @@
   interactive = auto
   status = auto
   ui = true
+
 [core]
   excludesfile = ~/.gitignore_global
-[include]
-  path = ~/.gitconfig_secret
+
 [help]
 	autocorrect = -1
+
 [credential]
 	helper = osxkeychain
+
 [rerere]
   enabled = true
+
 [includeIf "gitdir:~/Documents/projects/cdiscount/"]
   path = ~/Documents/projects/cdiscount/.gitconfig
+
 [includeIf "gitdir:~/Documents/projects/personal/"]
   path = ~/Documents/projects/personal/.gitconfig
