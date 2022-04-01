@@ -32,18 +32,6 @@ export PATH="./bin:$PATH"
 
 NPM_CONFIG_PREFIX=~/.npm-global
 
-PROXY="http://127.0.0.1:3128/"
-NO_PROXY="localhost,127.0.0.1,localaddress,*.localdomain.com,*.cdweb.biz,*.cdbdx.biz,tfsdropserver,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
-
-export HTTP_PROXY=$PROXY
-export HTTPS_PROXY=$PROXY
-export http_proxy=$PROXY
-export https_proxy=$PROXY
-export NO_PROXY=$NO_PROXY
-export no_proxy=$NO_PROXY
-export YARN_PROXY=""
-export YARN_HTTPS_PROXY=""
-
 alias reload="source ~/.zshrc && cd -"
 
 # LOAD SHELL ALIASES
