@@ -77,3 +77,6 @@ function gbrelease () {
     git checkout -b release/$branch
   fi
 }
+
+# List Git Authors by commits number
+alias gauth="git shortlog -s -n --all --no-merges"
