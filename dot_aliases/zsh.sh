@@ -3,6 +3,7 @@ alias guard="nocorrect bundle exec guard --no-bundler-warning"
 alias gulp="nocorrect gulp"
 alias neat="nocorrect neat"
 alias oldtop="/usr/bin/top"
+alias p="cd $PROJECTS"
 alias pk='nocorrect pk'
 alias reek='nocorrect reek -n -c ~/.reek'
 alias rspec="nocorrect rspec"
