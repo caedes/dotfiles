@@ -15,6 +15,8 @@ ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
+export EDITOR="code --wait --new-window"
+
 export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -30,12 +32,15 @@ export PATH="./bin:$PATH"
 
 NPM_CONFIG_PREFIX=~/.npm-global
 
-export HTTP_PROXY="http://127.0.0.1:3128/"
-export HTTPS_PROXY="http://127.0.0.1:3128/"
-export http_proxy="http://127.0.0.1:3128/"
-export https_proxy="http://127.0.0.1:3128/"
-export NO_PROXY="localhost,127.0.0.1,localaddress,*.localdomain.com,*.cdweb.biz,*.cdbdx.biz,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
-export no_proxy="localhost,127.0.0.1,localaddress,*.localdomain.com,*.cdweb.biz,*.cdbdx.biz,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
+PROXY="http://127.0.0.1:3128/"
+NO_PROXY="localhost,127.0.0.1,localaddress,*.localdomain.com,*.cdweb.biz,*.cdbdx.biz,tfsdropserver,10.0.0.0/8,192.168.0.0/16,172.16.0.0/12"
+
+export HTTP_PROXY=$PROXY
+export HTTPS_PROXY=$PROXY
+export http_proxy=$PROXY
+export https_proxy=$PROXY
+export NO_PROXY=$NO_PROXY
+export no_proxy=$NO_PROXY
 
 alias reload="source ~/.zshrc && cd -"
 
