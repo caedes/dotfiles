@@ -1,7 +1,7 @@
 # Classico aliases
 alias gaa="ga . -N"
 alias gap="git add --patch"
-alias gc="git cz"
+alias gc="npx git-cz"
 alias gds="git diff --staged"
 alias gloc="git ls-files | xargs cat | wc -l"
 alias gm="git merge"
