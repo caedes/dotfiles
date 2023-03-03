@@ -9,7 +9,6 @@ alias reek='nocorrect reek -n -c ~/.reek'
 alias rspec="nocorrect rspec"
 alias thin="nocorrect thin"
 alias thor="nocorrect thor"
-alias top="vtop --theme monokai"
 
 function update () {
   # Upgrade dotfiles
