@@ -10,7 +10,7 @@
   autocrlf = input
 
 [help]
-	autocorrect = -1
+	autocorrect = 100
 
 [credential]
 	helper = osxkeychain
