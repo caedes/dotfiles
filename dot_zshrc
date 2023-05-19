@@ -9,7 +9,7 @@ ZSH_THEME="miloshadzic"
 
 PROJECTS=~/Documents/projects/
 
-plugins=(brew git gitignore yarn)
+plugins=(brew git gitignore npm yarn)
 
 ZSH_DISABLE_COMPFIX="true"
 
