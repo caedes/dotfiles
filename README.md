@@ -5,6 +5,12 @@
 
 My personal dotfiles with [chezmoi](https://github.com/twpayne/chezmoi).
 
+## Updating dotfiles
+
+```shell
+chezmoi update
+```
+
 ## cURL aliases
 
 **No more cURL please.** Use [HTTPie](https://github.com/jkbrzt/httpie)
