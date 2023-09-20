@@ -3,11 +3,6 @@ alias gc="npx git-cz"
 alias gloc="git ls-files | xargs cat | wc -l"
 alias gitit="git init && git commit -m 'initial commit' --allow-empty"
 
-# Fix oh-my-zsh's git plugin
-if type gclean > /dev/null; then
-  unalias gclean
-fi
-
 # Git Submodule
 alias gsync="git fetch upstream && git merge upstream/master && ggpnp"
 
