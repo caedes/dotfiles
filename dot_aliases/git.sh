@@ -31,15 +31,5 @@ function gbf () {
   fi
 }
 
-# Create a release branch
-function gbrelease () {
-  if [ -z "$1" ]; then
-    red 'creating release branch: missing required argument branch name'
-  else
-    branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b release/$branch
-  fi
-}
-
 # List Git Authors by commits number
 alias gauth="git shortlog -s -n --all --no-merges"
