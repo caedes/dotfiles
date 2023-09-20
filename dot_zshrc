@@ -9,7 +9,7 @@ ZSH_THEME="miloshadzic"
 
 PROJECTS=~/Documents/projects/
 
-plugins=(brew git gitignore npm yarn)
+plugins=(brew git git-auto-fetch git-prompt gitfast gitignore npm thefuck yarn)
 
 ZSH_DISABLE_COMPFIX="true"
 
