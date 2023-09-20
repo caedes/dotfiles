@@ -1,13 +1,6 @@
 # Classico aliases
-alias gaa="ga . -N"
-alias gap="git add --patch"
 alias gc="npx git-cz"
-alias gds="git diff --staged"
 alias gloc="git ls-files | xargs cat | wc -l"
-alias gm="git merge"
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias gst="git status -sb"
-alias gt="git tag"
 alias gitit="git init && git commit -m 'initial commit' --allow-empty"
 
 # Fix oh-my-zsh's git plugin
