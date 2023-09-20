@@ -30,6 +30,3 @@ function gbf () {
     git checkout -b feature/$branch
   fi
 }
-
-# List Git Authors by commits number
-alias gauth="git shortlog -s -n --all --no-merges"
