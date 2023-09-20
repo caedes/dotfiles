@@ -6,9 +6,6 @@ alias gitit="git init && git commit -m 'initial commit' --allow-empty"
 # Git Submodule
 alias gsync="git fetch upstream && git merge upstream/master && ggpnp"
 
-# Pretty git logs
-alias gll="git log --pretty=format:'%C(yellow)%h %C(cyan)%ad %Creset%s%Cred [%cn]' --decorate --date=short"
-
 # Undo last commit
 function gundo () {
   git reset --soft HEAD~1 &&
