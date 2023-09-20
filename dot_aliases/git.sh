@@ -58,16 +58,6 @@ function gbf () {
   fi
 }
 
-# Create a hotfix branch
-function gbh () {
-  if [ -z "$1" ]; then
-    red 'creating hotfix branch: missing required argument branch name'
-  else
-    branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b hotfix/$branch
-  fi
-}
-
 # Create a release branch
 function gbrelease () {
   if [ -z "$1" ]; then
