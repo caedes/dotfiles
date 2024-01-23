@@ -11,6 +11,8 @@ PROJECTS=~/Documents/projects/
 
 plugins=(brew git git-auto-fetch gitfast gitignore npm nvm yarn)
 
+zstyle ':omz:plugins:nvm' autoload yes
+
 ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
