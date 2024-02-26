@@ -19,6 +19,8 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR="code --wait --new-window"
 
+export JAVA_HOME=/usr/local/Cellar/openjdk@17/17.0.10
+
 export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
@@ -30,6 +32,7 @@ export PATH="$HOME/bin:$PATH"
 export PATH=/usr/local/sbin:$PATH
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
+export PATH="$JAVA_HOME/bin:$PATH"
 export PATH="./bin:$PATH"
 
 NPM_CONFIG_PREFIX=~/.npm-global
