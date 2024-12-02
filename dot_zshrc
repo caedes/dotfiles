@@ -17,7 +17,7 @@ ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR="code --wait --new-window"
+export EDITOR="code --wait"
 
 export JAVA_HOME=/usr/local/Cellar/openjdk/21.0.2
 
