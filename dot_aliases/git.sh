@@ -27,6 +27,6 @@ function gbf () {
     red 'creating feature branch: missing required argument branch name'
   else
     branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b feature/$branch
+    git checkout -b features/$branch
   fi
 }
