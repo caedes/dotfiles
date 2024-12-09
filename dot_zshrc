@@ -30,6 +30,7 @@ export PATH=/usr/X11/bin:$PATH
 export PATH=/usr/libexec:$PATH
 export PATH="$HOME/bin:$PATH"
 export PATH=/usr/local/sbin:$PATH
+export PATH="/usr/local/opt/postgresql@12/bin:$PATH"
 export PATH="./node_modules/.bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
 export PATH="$JAVA_HOME/bin:$PATH"
