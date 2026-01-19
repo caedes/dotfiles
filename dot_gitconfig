@@ -19,8 +19,8 @@
 [rerere]
   enabled = true
 
-[includeIf "gitdir:~/Documents/projects/cdiscount/"]
-  path = ~/Documents/projects/cdiscount/.gitconfig
+[includeIf "gitdir:~/Documents/projects/niji/"]
+  path = ~/Documents/projects/niji/.gitconfig
 
 [includeIf "gitdir:~/Documents/projects/personal/"]
   path = ~/Documents/projects/personal/.gitconfig
