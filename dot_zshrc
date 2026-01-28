@@ -22,6 +22,7 @@ export JAVA_HOME=/usr/local/Cellar/openjdk/21.0.2
 export PATH=/bin:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 export PATH=/usr/sbin:$PATH
 export PATH=/sbin:$PATH
 export PATH=/usr/X11/bin:$PATH
