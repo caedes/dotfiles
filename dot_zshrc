@@ -61,6 +61,7 @@ alias reload="source ~/.zshrc && cd -"
 . ~/.aliases/rbenv.sh
 . ~/.aliases/ssh.sh
 . ~/.aliases/text.sh
+. ~/.aliases/worktrunk.sh
 . ~/.aliases/zsh.sh
 
 # Use .localrc for SUPER SECRET CRAP
