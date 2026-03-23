@@ -26,7 +26,7 @@ function gbf () {
   if [ -z "$1" ]; then
     red 'creating feature branch: missing required argument branch name'
   else
-    branch=`echo $1 | sed 's/-/_/g'`
-    git checkout -b features/$branch
+    local branch=$(format_branch_name "$1")
+    git checkout -b "features/$branch"
   fi
 }
