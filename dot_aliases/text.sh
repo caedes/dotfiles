@@ -4,3 +4,7 @@ alias lod='echo -n ಠ_ಠ | LANG=en_US.UTF-8 pbcopy'
 alias lol="say -v Hysterical 'haaa haha'"
 alias week='date +"%V"'
 alias zzz='echo -n "(￣o￣) zzZZzzZZ" | LANG=en_US.UTF-8 pbcopy'
+
+function format_branch_name() {
+  echo "$1" | sed 's/-/_/g'
+}

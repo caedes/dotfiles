@@ -47,6 +47,7 @@ alias reload="source ~/.zshrc && cd -"
 # LOAD SHELL ALIASES
 
 . ~/.aliases/colors.sh # Must be first included
+. ~/.aliases/text.sh # Must be second included
 . ~/.aliases/archive.sh
 . ~/.aliases/chrome.sh
 . ~/.aliases/editor.sh
@@ -60,7 +61,6 @@ alias reload="source ~/.zshrc && cd -"
 . ~/.aliases/rails.sh
 . ~/.aliases/rbenv.sh
 . ~/.aliases/ssh.sh
-. ~/.aliases/text.sh
 . ~/.aliases/worktrunk.sh
 . ~/.aliases/zsh.sh
 
