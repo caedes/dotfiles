@@ -6,20 +6,18 @@ alias wsd='wt switch develop'
 
 # Create a feature branch with worktrunk
 function wc () {
-  local type="features"
+  local type="$GIT_BRANCH_FEATURE"
   if [ "$1" = "--fix" ]; then
-    type="fixes"
+    type="$GIT_BRANCH_HOTFIX"
     shift
   fi
 
   if [ -z "$1" ] || [ -z "$2" ]; then
-    red "usage: wc [--fix] <jira_ticket> <feature_name>"
+    red "usage: wc [--fix] <id> <description>"
     return 1
   fi
 
-  local ticket=$(format_branch_name "$1")
-  local name=$(format_branch_name "$2")
-  local branch_name="${type}/${ticket}_${name}"
+  local branch_name="${type}/$(format_branch_name "$1" "$2")"
 
   wt switch --create "$branch_name" --base develop
 }
