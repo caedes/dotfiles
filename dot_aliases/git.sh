@@ -23,10 +23,20 @@ function gbclean () {
 
 # Create a feature branch
 function gbf () {
-  if [ -z "$1" ]; then
-    red 'creating feature branch: missing required argument branch name'
+  if [ -z "$1" ] || [ -z "$2" ]; then
+    red 'usage: gbf <id> <description>'
   else
-    local branch=$(format_branch_name "$1")
-    git checkout -b "features/$branch"
+    local suffix=$(format_branch_name "$1" "$2")
+    git checkout -b "${GIT_BRANCH_FEATURE}/${suffix}"
+  fi
+}
+
+# Create a hotfix branch
+function gbh () {
+  if [ -z "$1" ] || [ -z "$2" ]; then
+    red 'usage: gbh <id> <description>'
+  else
+    local suffix=$(format_branch_name "$1" "$2")
+    git checkout -b "${GIT_BRANCH_HOTFIX}/${suffix}"
   fi
 }
