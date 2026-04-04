@@ -1,4 +1,5 @@
 alias c="cursor ."
+alias cc="claude"
 
 function meeting() {
   cd ~/Projects/cdiscount/meetings
