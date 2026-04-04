@@ -5,7 +5,7 @@ alias wl='wt list'
 alias wsd='wt switch develop'
 
 # Create a feature branch with worktrunk
-function wc () {
+function wtc () {
   local type="$GIT_BRANCH_FEATURE"
   if [ "$1" = "--fix" ]; then
     type="$GIT_BRANCH_HOTFIX"
@@ -13,7 +13,7 @@ function wc () {
   fi
 
   if [ -z "$1" ] || [ -z "$2" ]; then
-    red "usage: wc [--fix] <id> <description>"
+    red "usage: wtc [--fix] <id> <description>"
     return 1
   fi
 
