@@ -13,11 +13,12 @@ function wtc () {
   fi
 
   if [ -z "$1" ] || [ -z "$2" ]; then
-    red "usage: wtc [--fix] <id> <description>"
+    red "usage: wtc [--fix] <id> <description> [<base=develop>]"
     return 1
   fi
 
   local branch_name="${type}/$(format_branch_name "$1" "$2")"
+  local base="${3:-develop}"
 
-  wt switch --create "$branch_name" --base develop
+  wt switch --create "$branch_name" --base "$base"
 }
