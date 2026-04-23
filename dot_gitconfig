@@ -24,3 +24,6 @@
 
 [includeIf "gitdir:~/Documents/projects/personal/"]
   path = ~/Documents/projects/personal/.gitconfig
+
+[includeIf "gitdir:~/Documents/projects/kering/"]
+  path = ~/Documents/projects/kering/.gitconfig
