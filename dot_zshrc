@@ -58,6 +58,7 @@ alias reload="source ~/.zshrc && cd -"
 . ~/.aliases/ip.sh
 . ~/.aliases/mongo.sh
 . ~/.aliases/node.sh
+. ~/.aliases/npm.sh
 . ~/.aliases/path.sh
 . ~/.aliases/pg.sh
 . ~/.aliases/rails.sh
@@ -78,3 +79,10 @@ if [ -f ~/.dotfiles_update ]; then
 fi
 
 if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+# bun completions
+[ -s "/Users/romain.laurent/.bun/_bun" ] && source "/Users/romain.laurent/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
