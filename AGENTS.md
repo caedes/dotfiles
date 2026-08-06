@@ -19,7 +19,7 @@ The `dot_dotfiles_update` script is sourced by `.zshrc` and auto-runs `chezmoi u
 
 ## Structure
 
-- `dot_zshrc` — Main shell config. Sources a curated list of alias files from `~/.aliases/` (explicit `. ~/.aliases/<name>.sh` lines — not a glob), configures NVM, rbenv, Java, PostgreSQL PATH entries, plus bun integration.
+- `dot_zshrc` — Main shell config. Sources a curated list of alias files from `~/.aliases/` (explicit `. ~/.aliases/<name>.sh` lines — not a glob), configures NVM, rbenv, Java, PostgreSQL PATH entries, plus bun integration. Shell integrations for `wt` (Worktrunk) and `zoxide` are appended at the end, each guarded by `command -v` so a fresh machine without the binary starts cleanly.
 - `dot_gitconfig` — Git settings with `includeIf gitdir:` rules pointing at per-context configs in `~/Documents/projects/<group>/.gitconfig` (currently `niji/`, `personal/`, `kering/`). Each per-context file sets identity, signing key, and (for Kering) the GitHub URL rewrite to use the `github-kering` SSH host alias.
 - `dot_aliases/` — Modular alias/function files loaded in alphabetical order. `colors.sh` and `text.sh` must load before others (they define helpers used downstream).
 - `dot_npmrcs/` — Example npm user-configs that the `npm.sh` hook can switch to. Only `*.example` files are tracked (real configs hold auth tokens and live un-tracked next to them, see "npm registry per directory").
