@@ -8,3 +8,5 @@ npm-debug.log
 Thumbs.db
 
 /tmp
+
+**/.claude/settings.local.json
