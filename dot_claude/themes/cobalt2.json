@@ -3,6 +3,7 @@
   "base": "dark-ansi",
   "overrides": {
     "claude": "#ffc600",
+    "clawd_body": "#ff9d00",
     "inactive": "#aaaaaa",
     "subtle": "#7a93a8",
     "suggestion": "#80fcff",
