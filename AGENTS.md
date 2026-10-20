@@ -71,12 +71,13 @@ One palette, Wes Bos's [Cobalt2 for VS Code](https://github.com/wesbos/cobalt2-v
 
 - **Orca terminal** — `~/.config/ghostty/config` sets `theme = cobalt2`, resolved from `~/.config/ghostty/themes/cobalt2`. Orca reads exactly these paths when importing (checked in Orca 1.4.232). The import copies the colors into Orca's settings, which live in a SQLite profile DB (`~/Library/Application Support/orca/`), so it is a one-off manual step, not something chezmoi keeps in sync. Re-import after changing the palette.
 - **Claude Code** — `~/.claude/themes/cobalt2.json`, base `dark-ansi`: it inherits the 16 ANSI colors from the Orca terminal, then overrides the accent, dimmed text, diffs and borders. Dimmed text is overridden on purpose: Cobalt2's brightBlack `#0050a4` is unreadable on `#193549` (contrast 1.6:1). Diff tokens are backgrounds, hence the darker greens/reds.
-- **Orca UI** (sidebars, tabs, buttons) — not themable beyond dark/light and a sidebar tint.
+- **Orca UI** (sidebars, tabs, buttons) — not themable beyond dark/light and a tint on the **left** sidebar. The right sidebar (file explorer) has no tint setting and stays Orca's default dark.
+- **Font** — [Fira Code](https://github.com/tonsky/FiraCode), set as `font-family` in the Ghostty config, so the same import switches the Orca terminal font (Claude Code renders in that terminal, so it follows). Ligatures stay on Orca's `auto`.
 
 ### Setting up a fresh machine
 
-1. `chezmoi apply`.
-2. Orca → Settings → Terminal → **Import from Ghostty**, review the diff, apply.
+1. `brew install --cask font-fira-code`, then `chezmoi apply`.
+2. Orca → Settings → Terminal → **Import from Ghostty**, review the diff (colors + font), apply.
 3. Orca → Settings → Appearance, sidebar tint (manual, stored in the Orca DB):
    - appearance mode: **tinted** (`leftSidebarAppearanceMode`)
    - tint color: `#0088ff` (`leftSidebarTintColor`)

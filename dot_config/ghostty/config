@@ -1,3 +1,4 @@
-# Read by Ghostty, and by Orca's "Import from Ghostty" (terminal colors only).
+# Read by Ghostty, and by Orca's "Import from Ghostty" (terminal colors and font).
 theme = cobalt2
+font-family = Fira Code
 split-divider-color = #0d3a58
