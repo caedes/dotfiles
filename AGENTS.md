@@ -25,6 +25,8 @@ The `dot_dotfiles_update` script is sourced by `.zshrc` and auto-runs `chezmoi u
 - `dot_npmrcs/` — Example npm user-configs that the `npm.sh` hook can switch to. Only `*.example` files are tracked (real configs hold auth tokens and live un-tracked next to them, see "npm registry per directory").
 - `dot_vimrc` — Minimal vim config (syntax, 2-space indent, no backups).
 - `dot_gitignore_global` — Global git ignores.
+- `dot_claude/themes/cobalt2.json` — Claude Code custom theme (Cobalt2), see "Cobalt2 theme".
+- `dot_config/ghostty/` — Ghostty config + Cobalt2 theme. Also the import source for Orca's terminal colors, see "Cobalt2 theme".
 
 ## Alias module system
 
@@ -62,6 +64,24 @@ Limitations: this only covers interactive zsh. A non-shell launch (IDE, CI) that
 3. Open a new shell (or `source ~/.zshrc`); `cd` into a `~/Documents/projects/kering/` repo and confirm with `npm config get registry` that you see the Artifactory URL.
 
 The token can be pulled from your password manager or another machine via a secure channel — do not commit it.
+
+## Cobalt2 theme (Claude Code + Orca)
+
+One palette, Wes Bos's [Cobalt2 for VS Code](https://github.com/wesbos/cobalt2-vscode), shared by the Orca terminal and Claude Code. Background is the editor blue `#193549` (not the VS Code terminal panel `#122738`).
+
+- **Orca terminal** — `~/.config/ghostty/config` sets `theme = cobalt2`, resolved from `~/.config/ghostty/themes/cobalt2`. Orca reads exactly these paths when importing (checked in Orca 1.4.232). The import copies the colors into Orca's settings, which live in a SQLite profile DB (`~/Library/Application Support/orca/`), so it is a one-off manual step, not something chezmoi keeps in sync. Re-import after changing the palette.
+- **Claude Code** — `~/.claude/themes/cobalt2.json`, base `dark-ansi`: it inherits the 16 ANSI colors from the Orca terminal, then overrides the accent, dimmed text, diffs and borders. Dimmed text is overridden on purpose: Cobalt2's brightBlack `#0050a4` is unreadable on `#193549` (contrast 1.6:1). Diff tokens are backgrounds, hence the darker greens/reds.
+- **Orca UI** (sidebars, tabs, buttons) — not themable beyond dark/light and a sidebar tint.
+
+### Setting up a fresh machine
+
+1. `chezmoi apply`.
+2. Orca → Settings → Terminal → **Import from Ghostty**, review the diff, apply.
+3. Orca → Settings → Appearance, sidebar tint (manual, stored in the Orca DB):
+   - appearance mode: **tinted** (`leftSidebarAppearanceMode`)
+   - tint color: `#0088ff` (`leftSidebarTintColor`)
+   - tint opacity: `0.15` (`leftSidebarTintOpacity`, max `0.35`)
+4. Claude Code: run `/theme` and pick **Cobalt2** (stored as `custom:cobalt2`). If `~/.claude/themes/` did not exist when Claude Code started, restart it once first.
 
 ## Git conventions
 

@@ -1,0 +1,24 @@
+{
+  "name": "Cobalt2",
+  "base": "dark-ansi",
+  "overrides": {
+    "claude": "#ffc600",
+    "inactive": "#aaaaaa",
+    "subtle": "#7a93a8",
+    "suggestion": "#80fcff",
+    "permission": "#0088ff",
+    "promptBorder": "#0088ff",
+    "planMode": "#fb94ff",
+    "success": "#3ad900",
+    "error": "#ff628c",
+    "warning": "#ffc600",
+    "diffAdded": "#215e37",
+    "diffRemoved": "#52405a",
+    "diffAddedWord": "#287f28",
+    "diffRemovedWord": "#804967",
+    "diffAddedDimmed": "#1d4940",
+    "diffRemovedDimmed": "#353a51",
+    "userMessageBackground": "#0d3a58",
+    "selectionBg": "#0050a4"
+  }
+}
